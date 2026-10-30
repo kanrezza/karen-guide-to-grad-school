@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guide to Graduate School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: an "application file" — sticky tab bar, one view per tab, profiles as filed dossiers with the same fixed section order */
+:root{
+  --paper:#f5f7f9; --card:#ffffff; --ink:#132433; --muted:#566676; --line:#d9e1e8;
+  --accent:#d1495b; --accent-ink:#ffffff; --teal:#0f6e74; --teal-soft:#e2f1f1;
+  --full:#127a4a; --full-soft:#e3f4ea; --part:#9a5b00; --part-soft:#fbefd9;
+  --warn-soft:#fdecee;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0f1820; --card:#16222c; --ink:#e6edf3; --muted:#9db0c0; --line:#2a3a47;
+  --accent:#ff6b7d; --accent-ink:#1a0b0e; --teal:#5cc6c8; --teal-soft:#123336;
+  --full:#5fd39a; --full-soft:#12301f; --part:#f2b55c; --part-soft:#33250f; --warn-soft:#3a1a20; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0f1820; --card:#16222c; --ink:#e6edf3; --muted:#9db0c0; --line:#2a3a47;
+  --accent:#ff6b7d; --accent-ink:#1a0b0e; --teal:#5cc6c8; --teal-soft:#123336;
+  --full:#5fd39a; --full-soft:#12301f; --part:#f2b55c; --part-soft:#33250f; --warn-soft:#3a1a20; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+a{color:var(--teal);text-underline-offset:2px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.15;text-wrap:balance;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ink);color:#fff}
+header.top .wrap{display:flex;align-items:center;gap:16px;padding-block:10px;flex-wrap:wrap}
+.brand{font-family:var(--f-display);font-weight:800;font-size:18px;color:#fff;text-decoration:none;white-space:nowrap}
+.brand span{color:#ff8a98}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:thin}
+nav.tabs a{color:#cfdbe5;text-decoration:none;padding:6px 10px;border-radius:999px;font-size:15px;white-space:nowrap}
+nav.tabs a[aria-current="page"]{background:#fff;color:#132433;font-weight:700}
+nav.tabs a:hover{color:#fff}
+main{padding-block:28px 64px}
+.view{display:grid;gap:28px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px;max-width:65ch;color:var(--ink)}
+p{max-width:70ch;margin:0}
+.stack{display:grid;gap:12px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.hero{display:grid;gap:14px;padding-block:8px 4px}
+.hero h1{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.stat{display:grid;gap:2px}
+.stat b{font-family:var(--f-display);font-size:30px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spacing:.06em;padding:4px 9px;border-radius:4px;border:1.5px solid currentColor;white-space:nowrap}
+.badge.full{color:var(--full);background:var(--full-soft)}
+.badge.part{color:var(--part);background:var(--part-soft)}
+.note{background:var(--warn-soft);border-left:4px solid var(--accent);padding:12px 16px;border-radius:6px;max-width:none}
+.note p{max-width:none}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.deadline{font-weight:700;color:var(--accent)}
+/* profile */
+.profile{scroll-margin-top:80px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.profile-head{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:0}
+@media (max-width:760px){.profile-head{grid-template-columns:1fr}}
+.profile-title{padding:22px;display:grid;gap:10px;align-content:start}
+.profile-title h3{font-size:clamp(22px,3vw,28px)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:15px;color:var(--muted)}
+.photo{margin:0;background:repeating-linear-gradient(135deg,var(--teal-soft) 0 12px,transparent 12px 24px);border-left:1px solid var(--line);display:grid;place-items:center;min-height:180px;padding:16px;text-align:center}
+.photo img{width:100%;height:100%;object-fit:cover}
+.photo figcaption{font-size:13px;color:var(--muted)}
+.ph{font-family:var(--f-mono);font-size:12px;color:var(--teal);font-weight:600}
+.secs{display:grid;border-top:1px solid var(--line)}
+details.sec{border-bottom:1px solid var(--line)}
+details.sec>summary{cursor:pointer;list-style:none;padding:14px 22px;display:flex;justify-content:space-between;gap:12px;font-family:var(--f-display);font-weight:700;font-size:17px}
+details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary::after{content:"+";font-family:var(--f-mono);color:var(--muted)}
+details.sec[open]>summary::after{content:"–"}
+.sec-body{padding:0 22px 18px;display:grid;gap:10px}
+.kv{display:grid;grid-template-columns:minmax(120px,210px) minmax(0,1fr);gap:6px 16px;font-size:16px}
+.kv dt{color:var(--muted);font-weight:600}
+.kv dd{margin:0;min-width:0}
+@media (max-width:520px){.kv{grid-template-columns:1fr}.kv dt{margin-top:6px}}
+.st{font-family:var(--f-mono);font-size:11px;font-weight:600;padding:2px 7px;border-radius:3px;white-space:nowrap;display:inline-block}
+.st.R{background:var(--accent);color:var(--accent-ink)}
+.st.O{background:var(--teal-soft);color:var(--teal)}
+.st.N{background:var(--full-soft);color:var(--full)}
+.st.S{background:var(--part-soft);color:var(--part)}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px}
+.shot{border:2px dashed var(--line);border-radius:8px;padding:16px;min-height:120px;display:grid;align-content:center;gap:6px;font-size:14px;color:var(--muted)}
+.keyfacts{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:14px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
+/* tier list */
+.tier{display:grid;grid-template-columns:72px minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.tier-label{display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:34px;color:#fff}
+.tS{background:#d1495b}.tA{background:#0f6e74}.tB{background:#3d5a80}.tC{background:#6b7785}
+.tier-items{display:grid}
+.rank{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:start;padding:14px 16px;border-bottom:1px solid var(--line)}
+.rank:last-child{border-bottom:0}
+.rank .n{font-family:var(--f-display);font-weight:800;font-size:26px;color:var(--muted)}
+.rank h4{font-size:18px}
+.score{font-family:var(--f-mono);font-size:20px;font-weight:600;text-align:right}
+.score small{display:block;font-size:11px;color:var(--muted)}
+.mini-photo{font-size:12px;color:var(--muted)}
+@media (max-width:520px){.rank{grid-template-columns:32px minmax(0,1fr)}.score{grid-column:2;text-align:left}}
+.bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:6px;max-width:220px}
+.bar i{display:block;height:100%;background:var(--teal)}
+.copy{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:4px;padding:1px 6px;cursor:pointer;margin-left:6px}
+footer{border-top:1px solid var(--line);padding-block:20px;color:var(--muted);font-size:14px}
+ol.steps{margin:0;padding-left:22px;display:grid;gap:6px}
+ul.clean{margin:0;padding-left:20px;display:grid;gap:4px}
+@media (prefers-reduced-motion:no-preference){.view{animation:fade .25s ease}@keyframes fade{from{opacity:.4}to{opacity:1}}}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="brand" href="#home">Guide to <span>Grad School</span></a>
+  <nav class="tabs" aria-label="Main menu">
+    <a href="#home">Home</a><a href="#start">Start Here</a><a href="#taiwan">Taiwan</a><a href="#asia">Asia</a><a href="#europe">Europe</a><a href="#compare">Compare</a><a href="#top10">Top 10</a><a href="#about">About &amp; Sources</a>
+  </nav>
+</div></header>
+
+<main class="wrap" id="app"></main>
+
+<footer><div class="wrap">Guide to Graduate School · Made for IBSC seniors · Last updated: 30 October 2026 · Facts were checked on official pages in October 2026. Always confirm on the official page before you apply.</div></footer>
+
+<script>
+const RATE_NOTE = "Exchange rates used (mid-market, checked mid–late October 2026): EUR 1 = NT$36.5 · SEK 1 = NT$3.26 · HUF 1 = NT$0.100 · JPY 1 = NT$0.20 · SGD 1 = NT$25.3 · THB 1 = NT$0.965 · CNY 1 = NT$4.8 (August 2026 reference) · USD 1 = NT$32.6. NT$ amounts are rounded.";
+
+const MOE = "https://taiwanscholarship.moe.gov.tw/web/index.aspx";
+const NCCU_DATES = "https://ici.nccu.edu.tw/PageDoc/Detail?fid=14420&id=37836";
+const NCCU_SCH = "https://impis.nccu.edu.tw/PageDoc?fid=10745";
+
+/* Checklist keys in fixed order */
+const CK = [["gpa","GPA"],["lang","Language"],["tr","Transcripts"],["dip","Diploma"],["thesis","Thesis"],["prop","Research proposal / Study plan"],["adv","Contact with an advisor"],["ps","Personal statement"],["rec","Recommendation letters"],["cv","CV / Résumé"],["pass","Passport or ID"],["fee","Application fee"],["trans","Translations"],["auth","Authentication"],["other","Other"],["tests","GRE / GMAT / local language tests"]];
+const ST = {R:"Required",O:"Optional",N:"Not required",S:"Not stated"};
+
+const NCCU_COMMON = {
+  tr:["R","Scanned copy of your full transcript, uploaded by you. If not in English or Chinese, add a notarized translation."],
+  dip:["R","Scanned copy of your highest diploma. Not stated whether a letter of expected graduation is accepted — ask nccugrad@nccu.edu.tw."],
+  pass:["R","Passport information page."],
+  fee:["R","Amount not stated on the pages we checked. Paid online; a credit-card payment needs no receipt. Ask nccugrad@nccu.edu.tw."],
+  trans:["R","Diploma and transcript need a notarized translation if they are not in English or Chinese."],
+  auth:["S","Not stated for upload. If you apply for the MOE Taiwan Scholarship, documents in other languages must be translated and authenticated by a Taiwan office abroad."],
+};
+
+const P = [
+/* ---------------- TAIWAN ---------------- */
+{id:"imics",region:"taiwan",uni:"National Chengchi University (NCCU)",prog:"International Master's Program in International Communication Studies (IMICS)",deg:"MA",len:"2 years (32 credits + thesis)",city:"Taipei, Taiwan",
+ url:"https://www.imics.nccu.edu.tw/international-admission",uniUrl:"https://www.nccu.edu.tw/index.php?Lang=en",
+ eng:"The curriculum is taught entirely in English (IMICS ‘About’ page).",
+ desc:"IMICS is NCCU's English-taught master's in communication, started in 2006. It focuses on cross-cultural and international communication with extra attention to the Asia-Pacific. Students take courses from the Journalism, Advertising, and Radio & Television departments and write a thesis. A dual-degree option with the University of South Carolina lets students add a U.S. master's.",
+ fit:"This is the closest Taiwan match to IBSC: same field, same language of study, and a strategic-communication angle. You can stay in Taiwan and build on your IBSC network.",
+ courses:["Communication Theory (required)","Transnational Public Relations and Advertisement (track)","Political Communication (track)"],
+ badge:"full",
+ fund:{src:"MOE Taiwan Scholarship (Ministry of Education) — apply through the Taiwan office in your home country",tuition:"MOE pays up to NT$40,000 per semester; for MOE scholars outside IMBA/MBA, NCCU waives the rest. Result: 100% of tuition and credit fees, for 2 years.",stipend:"NT$20,000 per month",ntd:20000,guar:"Competitive. Each Taiwan office selects its own scholars.",sep:"Yes. You apply to NCCU and, separately, to the Taiwan office in your home country.",who:"Not open to ROC (Taiwan) nationals or overseas Chinese students. Students now in a Taiwan bachelor's program may apply if they graduate this year. Do not hold another Taiwan government scholarship at the same time.",alt:"Other routes: MOFA Taiwan Scholarship (diplomatic allies only), NCCU Tuition Waiver (tuition only)."},
+ ck:Object.assign({},NCCU_COMMON,{
+  gpa:["S","No minimum stated by IMICS. The MOE scholarship looks for excellent grades (one office asks for 3.5/4.5)."],
+  lang:["R","TOEFL, IELTS or TOEIC, at most 3 years old, CEFR B1 or higher. If your previous degree was taught in English (like IBSC), you may give other proof instead."],
+  thesis:["R","A master's thesis is required in the program. Sending past papers about communication is encouraged when you apply."],
+  prop:["S","No separate study plan listed. Your Statement of Purpose covers your plans."],
+  adv:["N","Not required before applying."],
+  ps:["R","Statement of Purpose in English, max 3 A4 pages."],
+  rec:["R","Two letters of recommendation."],
+  cv:["S","Not listed."],
+  other:["R","Bank statement showing more than NT$200,000 (or scholarship proof), issued within 3 months. Headshot photo. Signed application form."],
+  tests:["N","No GRE/GMAT. No TOCFL needed for a fully English program."]}),
+ dl:{app:"Round 2: 19 Jan – 4 Mar 2027, 5 pm Taiwan time (Round 1 closed 15 Oct 2026)",sch:"MOE scholarship: set by your home-country Taiwan office, usually Feb–Apr 2027",start:"September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"4 Mar 2027",
+ contact:"imics@nccu.edu.tw",src:[["IMICS admission page","https://www.imics.nccu.edu.tw/international-admission"],["NCCU 2027 admission dates",NCCU_DATES],["NCCU scholarships (MOE waiver rule)",NCCU_SCH],["MOE Taiwan Scholarship",MOE]],
+ scores:{fund:8,fit:10,access:9,cost:9}},
+
+{id:"gcit",region:"taiwan",uni:"National Chengchi University (NCCU)",prog:"Master's Program in Global Communication and Innovation Technology (GCIT)",deg:"MA",len:"2 years",city:"Taipei, Taiwan",
+ url:"https://studyintaiwan.org/university/program/4788",uniUrl:"https://www.nccu.edu.tw/index.php?Lang=en",
+ eng:"Listed as ‘Above 90% taught in English’ on Study in Taiwan; NCCU calls it Taiwan's first English-medium master's in international communication.",
+ desc:"GCIT started in 2022 and draws teachers from five NCCU colleges: Communication, Informatics, Law, Liberal Arts, and Innovation. The program mixes global communication with new media technology. Recent course areas include new media, international journalism, human-computer interaction, marketing technology, and global communication culture. It has a new media studio for practice work.",
+ fit:"GCIT suits IBSC students who liked the digital side of strategic communication: platforms, campaigns, and data. It adds technology skills that many communication graduates lack.",
+ courses:["Marketing technology","New media","International journalism"],
+ badge:"full",
+ fund:{src:"MOE Taiwan Scholarship",tuition:"MOE pays up to NT$40,000 per semester; NCCU waives the rest for MOE scholars outside IMBA/MBA → 100%, 2 years.",stipend:"NT$20,000 per month",ntd:20000,guar:"Competitive.",sep:"Yes — separate application to your home-country Taiwan office.",who:"Same rules as the MOE Taiwan Scholarship: no ROC nationals or overseas Chinese; graduating Taiwan bachelor's students may apply.",alt:"NCCU Tuition Waiver (tuition only, nominated by the college)."},
+ ck:Object.assign({},NCCU_COMMON,{
+  gpa:["S","No minimum stated."],lang:["S","English proof expected; exact score not stated on the pages we checked. Ask the program."],
+  thesis:["S","Not stated on the pages we checked."],prop:["S","Not stated."],adv:["N","Not required."],ps:["S","Not stated — check the 2027 Round 2 brochure (published Feb 2027)."],
+  rec:["S","Not stated."],cv:["S","Not stated."],other:["R","NCCU university documents: headshot, signed form, bank statement over NT$200,000 (or scholarship proof)."],tests:["N","No GRE/GMAT stated."]}),
+ dl:{app:"Round 2: 19 Jan – 4 Mar 2027, 5 pm Taiwan time",sch:"MOE scholarship: home-country Taiwan office, usually Feb–Apr 2027",start:"September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"4 Mar 2027",
+ contact:"ici@nccu.edu.tw (college) · nccugrad@nccu.edu.tw (graduate admissions)",src:[["GCIT on Study in Taiwan","https://studyintaiwan.org/university/program/4788"],["NCCU 2027 admission dates",NCCU_DATES],["NCCU scholarships",NCCU_SCH],["MOE Taiwan Scholarship",MOE]],
+ scores:{fund:8,fit:9,access:9,cost:9}},
+
+{id:"impis",region:"taiwan",uni:"National Chengchi University (NCCU)",prog:"International Master's Program in International Studies (IMPIS)",deg:"MA",len:"2 years (30 credits + thesis)",city:"Taipei, Taiwan",
+ url:"https://impis.nccu.edu.tw/eng/PageDoc?fid=10740",uniUrl:"https://www.nccu.edu.tw/index.php?Lang=en",
+ eng:"‘All IMPIS courses are taught in English’ and the thesis must be in English (IMPIS ‘About Us’).",
+ desc:"IMPIS, in NCCU's College of International Affairs, studies international relations from political, economic, and social angles. Students choose a track in International Cooperation & Development or International Strategic Management. The thesis is written in English. Many students also learn Mandarin at NCCU's language center.",
+ fit:"This program fits IBSC students who want public diplomacy, NGO, or government communication careers. It builds the policy knowledge behind strategic messages between countries.",
+ courses:["International Strategic Management track","International Cooperation & Development track","Research methods and thesis"],
+ badge:"full",
+ fund:{src:"MOE Taiwan Scholarship; TaiwanICDF for some countries (IMPIS is an ICDF program)",tuition:"MOE pays up to NT$40,000 per semester; NCCU waives the rest → 100%, 2 years.",stipend:"NT$20,000 per month (MOE)",ntd:20000,guar:"Competitive.",sep:"Yes — Taiwan office in home country (MOE) or TaiwanICDF.",who:"MOE: no ROC nationals or overseas Chinese. ICDF: only citizens of certain partner countries.",alt:"MOFA Taiwan Scholarship: NT$33,000/month for diplomatic-ally citizens."},
+ ck:Object.assign({},NCCU_COMMON,{
+  gpa:["S","No minimum stated."],lang:["R","English proficiency required. Exact score not stated on the official page we checked."],
+  thesis:["R","Master's thesis in English is required."],prop:["S","Program forms are on the IMPIS download page; contents not checked."],adv:["N","Not required."],
+  ps:["S","Check IMPIS application forms."],rec:["S","Check IMPIS application forms."],cv:["S","Not stated."],
+  other:["R","NCCU documents: headshot, form, bank statement over NT$200,000 or scholarship proof."],tests:["N","No GRE/GMAT stated."]}),
+ dl:{app:"Round 2: 19 Jan – 4 Mar 2027 (if IMPIS opens in Round 2 — confirm)",sch:"MOE/ICDF: home-country Taiwan office, usually Feb–Apr 2027",start:"September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"4 Mar 2027",
+ contact:"impis@nccu.edu.tw",src:[["IMPIS About","https://impis.nccu.edu.tw/eng/PageDoc?fid=10740"],["IMPIS tuition & scholarships",NCCU_SCH],["NCCU 2027 admission dates",NCCU_DATES]],
+ scores:{fund:8,fit:6,access:9,cost:9}},
+
+{id:"ncku",region:"taiwan",uni:"National Cheng Kung University (NCKU)",prog:"Institute of Creative Industries Design (ICID) — Master's",deg:"MA",len:"2 years",city:"Tainan, Taiwan",
+ url:"https://old.studyintaiwan.org/university/program/1891",uniUrl:"https://web.ncku.edu.tw/index.php?Lang=en",
+ eng:"Study in Taiwan lists it as ‘Above 90% taught in English’ and says all classes are lectured in English.",
+ desc:"ICID trains people for creative industries such as advertising, media, design, festivals, and branding. Students pick one of three groups: Brand & Marketing Planning, Media & Interaction Design, or Industry & Service Innovation. Projects use real local sites and events in Tainan. The program ends with a thesis and project work.",
+ fit:"IBSC students who enjoyed branding and campaign planning will recognize the Brand & Marketing Planning group. It adds design thinking to your strategic communication skills.",
+ courses:["Branding and Marketing","Consumer Behavior","Digital Design in Creative Industries"],
+ badge:"part",
+ fund:{src:"MOE Taiwan Scholarship (main route). The MOE/NCKU Elite Scholarship is for current university lecturers only.",tuition:"MOE pays up to NT$40,000 per semester. We could not confirm on an official page that NCKU waives any amount above that, so 100% coverage is not confirmed.",stipend:"NT$20,000 per month (MOE)",ntd:20000,guar:"Competitive.",sep:"Yes — home-country Taiwan office.",who:"MOE rules (no ROC nationals or overseas Chinese).",alt:"NCKU's own scholarship: tuition waiver plus a small stipend (master's up to about NT$10,000/month per Study in Taiwan)."},
+ ck:{gpa:["S","Not stated."],lang:["R","English proof expected; exact score not stated on the pages we checked."],tr:["R","Official transcript in English."],dip:["S","Not stated."],thesis:["R","Thesis research is part of the MA."],prop:["S","Not stated."],adv:["S","Not stated."],ps:["S","Not stated."],rec:["S","Not stated."],cv:["S","Not stated."],pass:["R","Passport copy."],fee:["R","NT$1,600 (reported by a third-party site; confirm on NCKU's page)."],trans:["S","Not stated."],auth:["S","Not stated."],other:["S","Portfolio may help a design-related application — ask ICID."],tests:["N","No GRE/GMAT stated."]},
+ dl:{app:"Fall 2027 window not yet published (Fall 2025 ran 20 Nov 2024 – 20 Jan 2025)",sch:"MOE: home-country Taiwan office, usually Feb–Apr 2027",start:"September 2027"},
+ feeNtd:"NT$1,600 (unconfirmed)",gre:"No",dlShort:"Not yet published",
+ contact:"overseas@ncku.edu.tw",src:[["ICID on Study in Taiwan","https://old.studyintaiwan.org/university/program/1891"],["NCKU international admission","https://oia.ncku.edu.tw/p/404-1032-229816.php?Lang=en"],["MOE Taiwan Scholarship",MOE]],
+ scores:{fund:5,fit:7,access:8,cost:8}},
+
+{id:"stust",region:"taiwan",uni:"Southern Taiwan University of Science and Technology (STUST)",prog:"International Master's Program in Visual Communication Design",deg:"MDes / MA",len:"2 years",city:"Tainan, Taiwan",
+ url:"https://vc.stust.edu.tw/en",uniUrl:"https://www.stust.edu.tw/en",
+ eng:"Study in Taiwan lists it as ‘Above 90% taught in English’.",
+ desc:"This master's in the Department of Visual Communication Design covers graphic, interaction, animation, and brand identity design. It is research-based and practice-heavy, with studio work and a thesis. STUST is a technology university in Tainan with lower living costs than Taipei.",
+ fit:"IBSC graduates who designed campaign visuals and social content can turn that skill into a specialty. Visual identity is a key part of brand communication.",
+ courses:["Brand identity design","Interaction design","Information visualization"],
+ badge:"part",
+ fund:{src:"MOE Taiwan Scholarship or STUST International Student Scholarship. (The STUST Elite Scholarship is only for lecturers from South/Southeast Asia.)",tuition:"MOE pays up to NT$40,000 per semester. Full coverage beyond that is not confirmed.",stipend:"NT$20,000 per month (MOE)",ntd:20000,guar:"Competitive.",sep:"Yes — home-country Taiwan office.",who:"MOE rules.",alt:"STUST's own scholarship (amounts in STUST regulations)."},
+ ck:{gpa:["S","Not stated."],lang:["S","Not stated on the pages we checked."],tr:["R","Through STUST's online application."],dip:["S","Not stated."],thesis:["S","Not stated."],prop:["S","Not stated."],adv:["S","Not stated."],ps:["S","Not stated."],rec:["S","Not stated."],cv:["S","Not stated."],pass:["R","Passport copy."],fee:["S","Not stated."],trans:["S","Not stated."],auth:["S","Not stated."],other:["S","Portfolio likely helpful for a design program — ask the department."],tests:["N","No GRE/GMAT stated."]},
+ dl:{app:"Fall 2027 window not stated (Fall 2025 ran Jan – 15 May 2025)",sch:"MOE: home-country Taiwan office",start:"September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"Not yet published",
+ contact:"Office of International Affairs: +886-6-253-3131 ext. 1601",src:[["STUST Visual Communication Design","https://vc.stust.edu.tw/en"],["STUST English-taught programs (PDF)","https://oia.stust.edu.tw/Sysid/oia2_en/Download/Publicity/STUST%20English%20Taught%20Program%20(English).pdf"]],
+ scores:{fund:5,fit:6,access:8,cost:8}},
+
+/* ---------------- ASIA ---------------- */
+{id:"itasia",region:"asia",uni:"The University of Tokyo",prog:"ITASIA — Information, Technology, and Society in Asia (Graduate School of Interdisciplinary Information Studies)",deg:"M.A.S.",len:"2 years",city:"Tokyo, Japan",
+ url:"https://itasia.iii.u-tokyo.ac.jp/admissions",uniUrl:"https://www.u-tokyo.ac.jp/en/",
+ eng:"ITASIA calls itself ‘An English-language graduate program at the University of Tokyo’.",
+ desc:"ITASIA studies how media, information technology, and society shape each other in Asia. Students write a research proposal at entry and finish with a thesis. It belongs to the Graduate School of Interdisciplinary Information Studies, so classes mix media studies, sociology, and technology policy.",
+ fit:"For IBSC students who want to research digital media and public opinion in Asia. It is a strong path to a PhD or to research roles at think tanks and media companies.",
+ courses:["Media and society in Asia","Information technology policy","Research methods"],
+ badge:"full",
+ fund:{src:"Japanese Government (MEXT) Scholarship",tuition:"100% (admission, exam and tuition fees waived)",stipend:"JPY 144,000 per month (master's, 2026 rate)",ntd:28800,guar:"Very competitive.",sep:"Yes. MEXT ‘Embassy Recommendation’ through the Japanese embassy in your country. The round for 2027 entry closed around May–June 2026, so a current senior's realistic target is the 2028 round (opens spring 2027).",who:"Citizens of countries with diplomatic ties to Japan. Applicants already living in Japan cannot use most MEXT routes.",alt:"Without MEXT you must self-fund; tuition waivers are competitive."},
+ ck:{gpa:["S","No minimum stated on the page we checked."],lang:["R","TOEFL iBT or IELTS, official scores sent on time. Native English speakers exempt."],tr:["R","Certified transcripts, uploaded as PDF."],dip:["R","Degree certificates as described in the Admissions Guidelines."],thesis:["R","Upload one sample of research work/writing in English (text-searchable PDF). Thesis required in program."],prop:["R","Research Proposal, up to 4 parts × 3,000 characters."],adv:["N","Not required by the page we checked."],ps:["R","Personal Statement, up to 4 parts × 3,000 characters."],rec:["R","Two academic referees, registered online; they submit directly."],cv:["S","Publications list and previous research description are asked; CV not named."],pass:["S","Not listed on the page we checked."],fee:["R","Examination fee must be paid by the deadline (amount in Admissions Guidelines). Exemptions exist."],trans:["S","Not stated."],auth:["S","Not stated."],other:["R","Check Japan's End User List (export control) in the form."],tests:["R","GRE is mandatory."]},
+ dl:{app:"Noon, 2 December 2026 (JST)",sch:"MEXT Embassy Recommendation: 2027 round closed; next round ~Apr–Jun 2027 for 2028",start:"Fall (October) 2027"},
+ feeNtd:"Not stated",gre:"Required",dlShort:"2 Dec 2026",
+ contact:"Through the ITASIA contact page",src:[["ITASIA admissions","https://itasia.iii.u-tokyo.ac.jp/admissions"],["MEXT stipend amounts (Embassy of Japan in India)","https://www.in.emb-japan.go.jp/education/Research_Student.html"]],
+ scores:{fund:9,fit:7,access:4,cost:5}},
+
+{id:"ntu",region:"asia",uni:"Nanyang Technological University (NTU), Wee Kim Wee School of Communication and Information",prog:"Master of Communication Studies (by Research)",deg:"MCommSt (Research)",len:"Up to 2 years funded (min. 2 semesters)",city:"Singapore",
+ url:"https://www.ntu.edu.sg/wkwsci/admissions/programmes/graduate-programmes/detail/master-of-communication-studies",uniUrl:"https://www.ntu.edu.sg",
+ eng:"English is the language of the university and the program; an IELTS 7.0 is required only if your degree was not English-medium.",
+ desc:"This research master's at NTU's communication school combines three courses with an original thesis. Research areas include marketing communication and public relations, health communication, political communication, journalism, and international communication. Students pass a qualifying exam after 12 months and submit the thesis by the end of year two.",
+ fit:"WKWSCI covers marketing communication and PR, two IBSC core areas, at research level. It is ideal if you liked your IBSC research methods courses.",
+ courses:["CI7108 Media Influence and Persuasion","CI7109 Advertising Theory & Consumer Psychology","Marketing Communication & PR (research area)"],
+ badge:"full",
+ fund:{src:"NTU Research Scholarship (RSS)",tuition:"100% (annual tuition covered)",stipend:"SGD 2,900 per month (international master's student, rate from January 2026)",ntd:73400,guar:"Competitive; depends on school funding.",sep:"No separate form — tick your interest in the scholarship in the admission application.",who:"International students admitted full-time. Minimum Honours (Distinction) or equivalent.",alt:"Self-funded fees apply without the scholarship."},
+ ck:{gpa:["R","Bachelor's with Honours (Distinction) and CGPA 4.25/5.00 or equivalent."],lang:["R","IELTS Academic 7.0 (min. 6.5 each) only if your degree was not English-medium. TOEFL not accepted in place of IELTS. IBSC's English-medium degree may exempt you — confirm."],tr:["R","Through the online application."],dip:["S","Not stated."],thesis:["R","Thesis required by end of year 2."],prop:["R","Research proposal: research question, significance, literature review, methods, references."],adv:["S","Not stated as required. Contacting a matching professor is wise."],ps:["S","Not stated."],rec:["S","Not stated on the program page."],cv:["S","Not stated."],pass:["R","Passport copy."],fee:["R","SGD 54 (about NT$1,370)."],trans:["S","Not stated."],auth:["S","Not stated."],other:["S","—"],tests:["S","The page has a ‘GRE Requirement’ heading; check whether it applies to you."]},
+ dl:{app:"August 2027 intake dates not stated (January intake opened 1 Jun – 31 Jul)",sch:"Same as admission",start:"August 2027 (or January 2028)"},
+ feeNtd:"≈ NT$1,370",gre:"Check",dlShort:"Not yet published",
+ contact:"wkwsci_gradresearch@ntu.edu.sg",src:[["WKWSCI Master of Communication Studies","https://www.ntu.edu.sg/wkwsci/admissions/programmes/graduate-programmes/detail/master-of-communication-studies"],["NTU Research Scholarship","https://www.ntu.edu.sg/admissions/graduate/financialmatters/scholarships/rss"]],
+ scores:{fund:10,fit:9,access:4,cost:7}},
+
+{id:"gbj",region:"asia",uni:"Tsinghua University, School of Journalism and Communication",prog:"Global Business Journalism (GBJ)",deg:"MA",len:"2 years",city:"Beijing, China",
+ url:"https://www.globalbusinessjournalism.com/application-requirements",uniUrl:"https://www.tsinghua.edu.cn/en/",
+ eng:"GBJ FAQ: ‘Are all the classes taught in English? Yes.’",
+ desc:"GBJ is a partnership of Tsinghua, the International Center for Journalists, and Bloomberg News. Students learn to report on business, finance, and the Chinese economy across print, audio, video, and digital media, using Bloomberg terminals. All international students also take Chinese language classes, placed by level.",
+ fit:"Corporate and financial communication is a big part of strategic communication. GBJ teaches you how business news is made, which helps in investor relations, corporate PR, and media relations.",
+ courses:["Business and financial reporting","Multimedia storytelling","Chinese economy"],
+ badge:"full",
+ fund:{src:"Chinese Government Scholarship (CGS), applied through Tsinghua (Type B)",tuition:"100%",stipend:"CNY 3,000 per month + free dorm and medical insurance",ntd:14400,guar:"Competitive. GBJ says early applicants (by 31 Dec) have better chances.",sep:"Yes — apply for CGS through Tsinghua after receiving a pre-admission letter.",who:"Non-Chinese citizens with a valid passport. For scholarships: IELTS 7 or TOEFL 100.",alt:"Beijing Government / Tsinghua tuition scholarships (full or partial tuition)."},
+ ck:{gpa:["S","No minimum stated."],lang:["R","IELTS below 6.5 not eligible. Scholarship needs IELTS 7 or TOEFL 100."],tr:["R","Upload to Tsinghua's online system."],dip:["R","Bachelor's degree (or equivalent) required."],thesis:["S","Not stated on the page we checked."],prop:["S","See GBJ ‘Required documents’ page."],adv:["N","Not required."],ps:["S","See GBJ ‘Required documents’ page."],rec:["S","See GBJ ‘Required documents’ page."],cv:["S","See ‘Required documents’."],pass:["R","Valid non-Chinese passport."],fee:["R","Paid online at submission; amount not stated on the page we checked."],trans:["S","Not stated."],auth:["S","Not stated."],other:["S","Good health and character required; health form likely at CGS stage."],tests:["N","No GRE/GMAT. No Chinese test needed."]},
+ dl:{app:"2026 schedule: Round 1 1 Nov – 31 Dec; final round to 15 Apr. Expect the same for 2027.",sch:"Apply for CGS by 31 December 2026 (strongly advised)",start:"September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"31 Dec 2026",
+ contact:"tsjcws@mail.tsinghua.edu.cn · +86-10-62796842",src:[["GBJ application requirements","https://www.globalbusinessjournalism.com/application-requirements"],["GBJ scholarships","https://www.globalbusinessjournalism.com/scholarships"],["Tsinghua GBJ program page","https://www.tsjc.tsinghua.edu.cn/en/info/1148/1121.htm"]],
+ scores:{fund:7,fit:7,access:7,cost:7}},
+
+{id:"cuc",region:"asia",uni:"Communication University of China (CUC)",prog:"Master's Program in International Journalism and Communication (English-taught)",deg:"MA",len:"2 years",city:"Beijing, China",
+ url:"https://icuc.cuc.edu.cn/7289/list.htm",uniUrl:"https://en.cuc.edu.cn",
+ eng:"CUC lists it among ‘Master's Programs Taught in English’; teaching and thesis are in English.",
+ desc:"CUC is China's leading university for broadcasting and media. Its English-taught master's in International Journalism and Communication trains media professionals with a global, strategic mindset. Courses cover journalism theory, new media communication, writing, photography, and video production, and students finish with a thesis and oral defense.",
+ fit:"It suits IBSC students who want hands-on media production plus communication theory. The ‘strategic mindset’ goal matches IBSC directly.",
+ courses:["New Media Communication","Communication Research Methods","Journalistic Writing"],
+ badge:"full",
+ fund:{src:"Chinese Government Scholarship (CGS)",tuition:"100% (tuition and accommodation exempt)",stipend:"CNY 3,000 per month (standard CGS master's rate)",ntd:14400,guar:"Competitive.",sep:"Yes — through CUC or the Chinese embassy in your country.",who:"Non-Chinese citizens; usually under 35 for master's.",alt:"CUC / Beijing municipal scholarships (tuition only)."},
+ ck:{gpa:["S","Not stated for 2027."],lang:["R","TOEFL 79 or IELTS 6.0 equivalent (CUC brochure)."],tr:["R","Official transcript."],dip:["R","Diploma, or certificate of expected graduation (older CUC guide)."],thesis:["R","Thesis with oral defense."],prop:["R","Research proposal (older guide: 2,000+ words; recent CSC guide: 1,000+ for English programs) — confirm."],adv:["N","Not required."],ps:["R","Personal statement."],rec:["R","Two signed and stamped letters (older guide)."],cv:["S","Not stated."],pass:["R","Passport ID page."],fee:["S","Not stated for 2027."],trans:["R","Notarized translation for documents not in Chinese or English."],auth:["S","Not stated."],other:["R","Digital ID photo; signed warranty letter."],tests:["N","No GRE/GMAT; no HSK for English programs."]},
+ dl:{app:"2027 dates not yet published — check icuc.cuc.edu.cn",sch:"CGS: usually Jan–Apr 2027",start:"September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"Not yet published",
+ contact:"Via icuc.cuc.edu.cn (International Students Office)",src:[["CUC international admissions","https://icuc.cuc.edu.cn/7289/list.htm"],["CUC Admissions Q&A (Feb 2026)","https://icuc.cuc.edu.cn/2026/0204/c7289a266930/page.htm"],["CUC English-taught programs (older page)","https://international.cuc.edu.cn/2017/0105/c3111a91270/page.htm"]],
+ scores:{fund:7,fit:8,access:5,cost:7}},
+
+{id:"chula",region:"asia",uni:"Chulalongkorn University, Faculty of Communication Arts",prog:"Master of Arts in Strategic Communication Management (MSCM), International Program",deg:"MA",len:"1.5–2 years",city:"Bangkok, Thailand",
+ url:"https://www.iscm.commarts.chula.ac.th/mscm-program",uniUrl:"https://www.chula.ac.th/en/",
+ eng:"An international program that uses English as the medium of instruction.",
+ desc:"MSCM is a strategic communication master's at Thailand's top university. It focuses on integrated marketing communications, strategic brand management, and global communication management. Students choose Plan A (thesis) or Plan B (professional project), join study tours, and can go on exchange with 50+ partner universities.",
+ fit:"The program name says it all — strategic communication management. Its courses continue straight from IBSC's PR, branding, and crisis communication classes.",
+ courses:["Strategic Planning and Evaluation for Integrated Communications","Crisis Communication Management","Principles of Communication Management"],
+ badge:"part",
+ fund:{src:"Chulalongkorn Graduate Scholarship for ASEAN or Non-ASEAN Countries (now run as ‘Chula LINK’)",tuition:"University tuition only. Faculty/program special fees are NOT covered. For MSCM that is THB 107,000 per semester (≈ NT$103,000) — the largest part of the cost.",stipend:"THB 16,000 per month for living and housing (≈ NT$15,400)",ntd:15400,guar:"Competitive.",sep:"Yes — separate scholarship application.",who:"International students; not those who studied at Chula for more than one semester. Applicants should have finished a bachelor's.",alt:"—"},
+ ck:{gpa:["S","No minimum stated."],lang:["R","IELTS 6.5, CU-TEP 79, or TOEFL iBT 79, within 2 years. Exempt if your degree was taught in English (send proof)."],tr:["R","Official transcripts."],dip:["R","Degree, or a ‘Letter of Guarantee’ if you are in your last semester."],thesis:["O","Plan A thesis or Plan B professional project."],prop:["N","Not required; research interests go in the SOP."],adv:["N","Not required."],ps:["R","Statement of Purpose, max 2 A4 pages, Times New Roman 12, 1.5 spacing."],rec:["S","Not listed in 2025 call."],cv:["S","Not listed."],pass:["R","Passport or national ID copy."],fee:["R","THB 1,000 (≈ NT$965), bank transfer to KBANK; non-refundable."],trans:["S","Not stated."],auth:["S","Not stated."],other:["R","Two 1-inch photos; online interview (Zoom)."],tests:["N","No GRE/GMAT."]},
+ dl:{app:"2025 cycle: 1 Feb – 11 Apr; 2027 dates not yet published",sch:"Chula LINK 2026 closed 24 May 2026; 2027 dates not yet published",start:"August 2027"},
+ feeNtd:"≈ NT$965",gre:"No",dlShort:"~Apr 2027 (est.)",
+ contact:"mscm.commarts@chula.ac.th · +66 2 218 2199",src:[["MSCM program","https://www.iscm.commarts.chula.ac.th/mscm-program"],["MSCM admission announcement (PDF)","https://www.iscm.commarts.chula.ac.th/_docs/mscm-admission-2025.pdf"],["Chula ASEAN/Non-ASEAN scholarship","https://academic.chula.ac.th/detail/news/25"]],
+ scores:{fund:4,fit:10,access:7,cost:8}},
+
+/* ---------------- EUROPE ---------------- */
+{id:"lund",region:"europe",uni:"Lund University",prog:"Strategic Communication — Master of Science programme",deg:"MSc",len:"2 years (120 credits)",city:"Helsingborg, Sweden",
+ url:"https://www.lunduniversity.lu.se/study/strategic-communication-master-of-science-programme-SASKO",uniUrl:"https://www.lunduniversity.lu.se",
+ eng:"Programme page: Language — English.",
+ desc:"Lund's MSc teaches strategic communication together with organisational communication, public relations, and brand communication. It looks at private, public, and non-profit organisations. In the third semester students choose electives, an internship, or an exchange. Graduates work as communication strategists, PR consultants, and communication managers.",
+ fit:"This is the same field as IBSC at master's level in one of Europe's best-known strategic communication departments. The entry rule asks for 90 credits in strategic communication or media — IBSC fits exactly.",
+ courses:["Strategic communication theory","Brand communication","Internship course (KOMN03)"],
+ badge:"full",
+ fund:{src:"Swedish Institute Scholarship for Global Professionals (SISGP)",tuition:"100% (SEK 270,000 total)",stipend:"SEK 12,000 per month (≈ NT$39,100)",ntd:39100,guar:"Very competitive.",sep:"Yes. Apply to Lund by 15 Jan 2027, then to SI in February 2027.",who:"Citizens of 34 eligible countries (includes Vietnam, Indonesia, Thailand, Philippines; not Taiwan). Needs work and leadership experience — most countries require 3,000 hours. Most graduating seniors do not qualify yet.",alt:"Lund University Global Scholarship (tuition reduction, no stipend)."},
+ ck:{gpa:["S","No minimum; selection by grades, bachelor's essay, English, and statement."],lang:["R","English 6 / English level 2 (e.g., IELTS 6.5 typical; see universityadmissions.se)."],tr:["R","Upload to universityadmissions.se following their document rules."],dip:["R","Bachelor's degree with 90 credits in strategic communication, media, journalism, marketing or similar."],thesis:["R","Your bachelor's essay is assessed. Master's thesis required."],prop:["N","Not required."],adv:["N","Not required."],ps:["R","Statement of purpose."],rec:["S","Not required by Lund; SI asks for references."],cv:["R","For the SI scholarship (Europass-style)."],pass:["R","Passport copy."],fee:["R","University Admissions application fee (SEK 900 standard, confirm)."],trans:["R","Documents not in English/Swedish must be officially translated."],auth:["S","Follow universityadmissions.se rules."],other:["R","SI: proof of work and leadership experience."],tests:["N","No GRE/GMAT."]},
+ dl:{app:"15 January 2027",sch:"SI scholarship: about 8–24 February 2027",start:"30 August 2027"},
+ feeNtd:"≈ NT$2,900 (unconfirmed)",gre:"No",dlShort:"15 Jan 2027",
+ contact:"master-stratcom@iko.lu.se",src:[["Lund programme page","https://www.lunduniversity.lu.se/study/strategic-communication-master-of-science-programme-SASKO"],["SI Scholarship for Global Professionals","https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/"]],
+ scores:{fund:8,fit:10,access:3,cost:7}},
+
+{id:"mundus",region:"europe",uni:"Aarhus University (coordinator) + one Year-2 university",prog:"Erasmus Mundus Master's in Journalism, Media and Globalisation (Mundus Journalism)",deg:"MA (joint degree)",len:"2 years",city:"Aarhus, Denmark → Amsterdam, London, Munich or Prague",
+ url:"https://mundusjournalism.com/admissions/admission-requirements",uniUrl:"https://international.au.dk",
+ eng:"‘The Erasmus Mundus Journalism programme is taught entirely in English.’",
+ desc:"Year one in Aarhus builds a critical view of journalism, media, and globalisation. Year two is a specialisation: Politics & Communication (Amsterdam), Crisis & Conflict (London), Cultures & Contexts (Munich), or Authoritarianism & Transition (Prague). Students come from 100+ countries.",
+ fit:"The Politics & Communication track is directly relevant to strategic and political communication. You also gain a joint European degree and a large alumni network.",
+ courses:["Politics & Communication (Amsterdam track)","Journalism and globalisation (Aarhus)","Crisis & Conflict (London track)"],
+ badge:"full",
+ fund:{src:"Erasmus Mundus Scholarship (European Union)",tuition:"100% for both years",stipend:"EUR 1,400 per month for up to 24 months (≈ NT$51,100) + health insurance",ntd:51100,guar:"Very competitive — 10–15 scholarships from up to 700 applicants.",sep:"No — one application form covers admission and scholarship.",who:"All nationalities. Not eligible if you already hold a 2-year master's or had an Erasmus Mundus scholarship.",alt:"Self-funded: EUR 9,000 (year 1, non-EU) + EUR 12,000 (year 2)."},
+ ck:{gpa:["R","Above-average bachelor's grades expected."],lang:["R","CEFR C1: IELTS 7.0 (6.5 each for Amsterdam) or TOEFL iBT 100. Amsterdam and London tracks give no exemption."],tr:["R","Transcript of all courses in the application package."],dip:["O","You may apply before graduating; send proof of degree by 1 August."],thesis:["R","Master's thesis required."],prop:["N","Not required."],adv:["N","Not required."],ps:["R","‘Application Reflections’ section of the form (counts for the scholarship)."],rec:["S","See application process page."],cv:["S","See application process page."],pass:["R","Passport."],fee:["S","Not stated."],trans:["S","Not stated."],auth:["S","Vietnamese, Chinese and Indian degrees need an APS certificate for the Munich track."],other:["R","Proof of at least 3 months of full-time journalism experience (contract, payslips, or editor's letter)."],tests:["N","No GRE/GMAT."]},
+ dl:{app:"1 November 2026 – 10 January 2027",sch:"Same form, same deadline",start:"1 September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"10 Jan 2027",
+ contact:"Via mundusjournalism.com/contact",src:[["Admission requirements","https://mundusjournalism.com/admissions/admission-requirements"],["Tuition, scholarships and stipends","https://mundusjournalism.com/admissions/tuition-stipends-and-scholarships"]],
+ scores:{fund:10,fit:8,access:5,cost:7}},
+
+{id:"euroculture",region:"europe",uni:"University of Groningen (coordinator) + consortium",prog:"Erasmus Mundus Joint Master Euroculture",deg:"MA (joint degree)",len:"2 years",city:"Groningen, Göttingen, Uppsala, Kraków and others",
+ url:"https://www.euroculturemaster.eu/erasmus-mundus-scholarship",uniUrl:"https://www.rug.nl",
+ eng:"Taught in English across the consortium (Erasmus Mundus joint master).",
+ desc:"Euroculture studies society, politics, and culture in Europe in a global context. Students move between at least two European universities and can do a research or professional track, with options at partners in Japan, India, Canada, and Mexico. It includes an intensive programme and a thesis.",
+ fit:"Useful for IBSC students interested in EU institutions, cultural diplomacy, or international NGOs. It adds European policy knowledge to communication skills.",
+ courses:["European culture and identity","Professional track / internship","Research seminar and thesis"],
+ badge:"full",
+ fund:{src:"Erasmus Mundus Scholarship (renewed for 2027–2032 intakes)",tuition:"100% of participation costs",stipend:"EUR 1,400 per month for 24 months (≈ NT$51,100) + health insurance",ntd:51100,guar:"Competitive.",sep:"Same application.",who:"Most nationalities. You must ALREADY hold your bachelor's degree by the application deadline — so a current senior cannot get the 2027 scholarship. Plan for the 2028–2030 intake.",alt:"Self-funded participation fees."},
+ ck:{gpa:["S","Not stated on the scholarship page."],lang:["S","See application procedure; exemption may apply for English-medium degrees."],tr:["R","See application procedure."],dip:["R","Degree must be finished by the scholarship deadline."],thesis:["R","Master's thesis."],prop:["S","See application procedure."],adv:["N","Not required."],ps:["S","See application procedure."],rec:["S","See application procedure."],cv:["S","See application procedure."],pass:["R","Passport."],fee:["S","Not stated."],trans:["S","Not stated."],auth:["S","Not stated."],other:["S","—"],tests:["N","No GRE/GMAT."]},
+ dl:{app:"15 January 2027 (scholarship applicants)",sch:"Same",start:"September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"15 Jan 2027",
+ contact:"euroculture@rug.nl",src:[["Euroculture Erasmus Mundus scholarship","https://www.euroculturemaster.eu/erasmus-mundus-scholarship"],["Application procedure","https://www.euroculturemaster.eu/application-procedure"]],
+ scores:{fund:10,fit:5,access:3,cost:8}},
+
+{id:"glocal",region:"europe",uni:"University of Glasgow (coordinator) + 6 partners",prog:"Erasmus Mundus International Master in Global Markets, Local Creativities (GLOCAL)",deg:"International Master (joint/multiple degree)",len:"2 years (120 ECTS)",city:"Glasgow, Barcelona, Rotterdam, Uppsala, Göttingen (+ Kyoto, Bogotá)",
+ url:"https://www.eur.nl/en/master/global-markets-local-creativities-glocal",uniUrl:"https://www.gla.ac.uk",
+ eng:"Delivered in English across the consortium (confirm per track).",
+ desc:"GLOCAL studies how global markets meet local creative economies: cultural and creative industries, entrepreneurship, development, and global business history. Students follow one track across two or three universities and receive joint or multiple degrees. One track includes a Master in Strategic Management from Universidad de los Andes.",
+ fit:"For IBSC students drawn to creative industries, place branding, and international business. It explains the markets that strategic communicators work inside.",
+ courses:["Institutional Change and Creative Industries (track)","Global markets and development","Entrepreneurship and local economies"],
+ badge:"full",
+ fund:{src:"Erasmus Mundus Scholarship",tuition:"100%",stipend:"EUR 1,400 per month (≈ NT$51,100)",ntd:51100,guar:"Competitive.",sep:"Same application.",who:"All nationalities.",alt:"Self-funded."},
+ ck:{gpa:["R","UK 2:1 or country-specific GPA equivalent."],lang:["R","Proof of English required (score not confirmed)."],tr:["R","Required."],dip:["S","Not stated."],thesis:["R","Dissertation required."],prop:["S","Not stated."],adv:["N","Not required."],ps:["S","Not stated."],rec:["S","Not stated."],cv:["S","Not stated."],pass:["R","Passport scan."],fee:["N","No application fee (reported by scholarship listings; confirm)."],trans:["S","Not stated."],auth:["S","Not stated."],other:["R","Choose one study track when applying."],tests:["N","No GRE/GMAT."]},
+ dl:{app:"14 January 2027, 13:00 UK time (from scholarship listings — confirm on official site)",sch:"Same",start:"September 2027"},
+ feeNtd:"NT$0 (unconfirmed)",gre:"No",dlShort:"14 Jan 2027",
+ contact:"Via the GLOCAL consortium site / University of Glasgow",src:[["GLOCAL at Erasmus University Rotterdam","https://www.eur.nl/en/master/global-markets-local-creativities-glocal"],["University of Glasgow","https://www.gla.ac.uk"]],
+ scores:{fund:10,fit:6,access:6,cost:8}},
+
+{id:"corvinus",region:"europe",uni:"Corvinus University of Budapest",prog:"MA in Communication and Media Studies",deg:"MA",len:"2 years (120 ECTS, 4 semesters)",city:"Budapest, Hungary",
+ url:"https://uni-corvinus.hu/post/landing-page/ma-communication-and-media-science/?lang=en",uniUrl:"https://www.uni-corvinus.hu/?lang=en",
+ eng:"Offered in English (Stipendium Hungaricum course page: Study language — English).",
+ desc:"Corvinus's MA covers interpersonal, social, strategic, and new media communication. Students learn to manage media and plan creative campaigns, and complete a 90-hour internship. Graduates work in PR, media, and marketing roles. Budapest is a lower-cost EU capital.",
+ fit:"The curriculum reads like an advanced IBSC: persuasive communication, PR, marketing communication design, and media strategy. It is a practical fit for agency or in-house careers.",
+ courses:["Persuasive Communication and Rhetoric","Public Relations and Marketing Communication Design","Media Strategy"],
+ badge:"part",
+ fund:{src:"Stipendium Hungaricum (Hungarian Government)",tuition:"100%",stipend:"HUF 43,700 per month (≈ NT$4,400) + free dorm or a housing contribution. The program says this does not cover full living costs.",ntd:4400,guar:"Competitive; you are first nominated by your home-country partner.",sep:"Yes — apply on the Stipendium Hungaricum portal.",who:"Citizens of partner countries only; check the list. Programme availability depends on nationality.",alt:"Self-funded: EUR 3,300 per semester (non-EEA)."},
+ ck:{gpa:["S","Grades converted to an admission score."],lang:["R","English proof; score not stated on the page we checked."],tr:["R","Entry documents accepted in English."],dip:["R","Bachelor's with 30 credits in related fields (communication, marketing, media, PR...)."],thesis:["R","Thesis required."],prop:["N","Not required."],adv:["N","Not required."],ps:["R","Motivation letter."],rec:["S","Not stated."],cv:["S","Not stated."],pass:["R","Passport."],fee:["S","Not stated."],trans:["R","Documents must be in English."],auth:["S","Not stated."],other:["R","Possible entrance exam/interview (Mar–May)."],tests:["N","No GRE/GMAT."]},
+ dl:{app:"Stipendium Hungaricum: expected Nov 2026 – ~15 Jan 2027 (last round closed 15 Jan 2026)",sch:"Same",start:"September 2027"},
+ feeNtd:"Not stated",gre:"No",dlShort:"~15 Jan 2027",
+ contact:"Corvinus International Student Recruitment (enquiry form)",src:[["Corvinus MA page","https://uni-corvinus.hu/post/landing-page/ma-communication-and-media-science/?lang=en"],["Stipendium Hungaricum course listing","https://apply.stipendiumhungaricum.hu/courses/course/1723"],["Stipendium Hungaricum","https://stipendiumhungaricum.hu"]],
+ scores:{fund:3,fit:9,access:7,cost:8}}
+];
+
+const W = {fund:.35,fit:.30,access:.20,cost:.15};
+P.forEach(p=>{p.total=Math.round((p.scores.fund*W.fund+p.scores.fit*W.fit+p.scores.access*W.access+p.scores.cost*W.cost)*100)/10});
+const ranked = [...P].sort((a,b)=> (a.badge===b.badge?0:(a.badge==="full"?-1:1)) || b.total-a.total || b.scores.fit-a.scores.fit);
+const top10 = ranked.slice(0,10), out5 = ranked.slice(10);
+const tierOf = t => t>=85?"S":t>=75?"A":t>=70?"B":"C";
+
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const badge = b => b==="full"?'<span class="badge full">✓ FULL PACKAGE</span>':'<span class="badge part">◐ PARTLY FUNDED</span>';
+const ntd = n => "NT$"+n.toLocaleString("en-US");
+const link = (t,u)=>`<a href="${u}" target="_blank" rel="noopener">${esc(t)}</a>`;
+const REG = {taiwan:"Taiwan",asia:"Asia",europe:"Europe"};
+
+function profile(p){
+  const f=p.fund;
+  const rows = CK.map(([k,l])=>{const v=p.ck[k]||["S","Not stated."];return `<tr><th scope="row">${l}</th><td><span class="st ${v[0]}">${ST[v[0]]}</span></td><td>${esc(v[1])}</td></tr>`}).join("");
+  return `<article class="profile" id="p-${p.id}">
+  <div class="profile-head">
+    <div class="profile-title">
+      <div class="eyebrow">${REG[p.region]} · ${esc(p.deg)}</div>
+      <h3>${esc(p.prog)}</h3>
+      <div><strong>${esc(p.uni)}</strong></div>
+      <div class="meta"><span>📍 ${esc(p.city)}</span><span>⏱ ${esc(p.len)}</span></div>
+      <div class="keyfacts">${badge(p.badge)}<span class="chip">Stipend ≈ <b class="num">${ntd(p.fund.ntd)}</b>/month</span><span class="chip">Apply by <b class="deadline">${esc(p.dlShort)}</b></span></div>
+      <div class="meta">${link("Program page ↗",p.url)}${link("University website ↗",p.uniUrl)}</div>
+    </div>
+    <figure class="photo" data-photo="${p.id}"><div><div class="ph">ADD UNIVERSITY PHOTO</div><figcaption>Alt text: “Campus of ${esc(p.uni)}”. Credit: ________</figcaption></div></figure>
+  </div>
+  <div class="secs">
+    <details class="sec" open><summary>About the program</summary><div class="sec-body"><p>${esc(p.desc)}</p><p><small><b>English-taught:</b> ${esc(p.eng)}</small></p></div></details>
+    <details class="sec" open><summary>Why it fits IBSC</summary><div class="sec-body"><p>${esc(p.fit)}</p><div class="keyfacts">${p.courses.map(c=>`<span class="chip">${esc(c)}</span>`).join("")}</div></div></details>
+    <details class="sec" open><summary>Funding ${badge(p.badge)}</summary><div class="sec-body"><dl class="kv">
+      <dt>Source</dt><dd>${esc(f.src)}</dd><dt>Tuition covered</dt><dd>${esc(f.tuition)}</dd>
+      <dt>Stipend</dt><dd><b>${esc(f.stipend)}</b> → about <span class="num">${ntd(f.ntd)}</span> per month</dd>
+      <dt>Guaranteed?</dt><dd>${esc(f.guar)}</dd><dt>Separate application?</dt><dd>${esc(f.sep)}</dd><dt>Who can apply</dt><dd>${esc(f.who)}</dd><dt>Other options</dt><dd>${esc(f.alt)}</dd></dl></div></details>
+    <details class="sec"><summary>Requirements and documents</summary><div class="sec-body"><div class="scroll"><table><thead><tr><th>Item</th><th>Status</th><th>What to know</th></tr></thead><tbody>${rows}</tbody></table></div></div></details>
+    <details class="sec" open><summary>Deadlines</summary><div class="sec-body"><dl class="kv"><dt>Application</dt><dd class="deadline">${esc(p.dl.app)}</dd><dt>Scholarship</dt><dd class="deadline">${esc(p.dl.sch)}</dd><dt>Start date</dt><dd>${esc(p.dl.start)}</dd></dl></div></details>
+    <details class="sec"><summary>Screenshots</summary><div class="sec-body"><div class="shots"><div class="shot"><b>ADD SCREENSHOT 1 — Funding</b><span>Crop the official funding text. Date taken: ________</span></div><div class="shot"><b>ADD SCREENSHOT 2 — Requirements</b><span>Crop the official requirements list. Date taken: ________</span></div></div></div></details>
+    <details class="sec"><summary>Contact and sources</summary><div class="sec-body"><p><b>Admissions contact:</b> <span class="num">${esc(p.contact)}</span></p><ul class="clean">${p.src.map(s=>`<li>${link(s[0],s[1])}</li>`).join("")}</ul><p><small>Last checked: 30 October 2026</small></p></div></details>
+  </div></article>`;
+}
+
+function regionView(r,intro){
+  const list=P.filter(p=>p.region===r);
+  return `<section class="view"><div class="hero"><div class="eyebrow">${REG[r]} · 5 programs</div><h1>${intro[0]}</h1><p class="lede">${intro[1]}</p></div>
+  <div class="grid3">${list.map(p=>`<a class="panel" href="#${r}" data-jump="p-${p.id}" style="text-decoration:none;color:inherit;display:grid;gap:6px"><b>${esc(p.prog.split(" (")[0].split(" — ")[0])}</b><span style="color:var(--muted);font-size:15px">${esc(p.uni.split(",")[0].split(" (")[0])}</span>${badge(p.badge)}</a>`).join("")}</div>
+  <p class="note"><b>Before you read:</b> Each profile uses the same order: About → Why it fits → Funding → Requirements → Deadlines → Screenshots → Sources. Tap a heading to open or close it. ${RATE_NOTE}</p>
+  ${list.map(profile).join("")}</section>`;
+}
+
+const V = {
+home:()=>`<section class="view"><div class="hero"><div class="eyebrow">For IBSC seniors · Fall 2027 entry</div><h1>Study a master's for <em>NT$0 tuition</em> — and get paid to live.</h1><p class="lede">This guide lists 15 English-taught master's programs related to strategic communication: 5 in Taiwan, 5 in other Asian countries, and 5 in Europe. Each one comes with a scholarship that pays tuition, a monthly stipend, or both.</p></div>
+ <div class="grid3"><div class="panel stat"><b>15</b><span>programs checked on official pages</span></div><div class="panel stat"><b>11</b><span>with a <span class="badge full">FULL PACKAGE</span></span></div><div class="panel stat"><b class="num">NT$4,400 – 73,400</b><span>monthly stipends, converted to NT$</span></div></div>
+ <div class="panel stack"><h2>How to use this guide</h2><ol class="steps"><li><a href="#start">Start Here</a>: learn the key words and the general application timeline.</li><li>Read the 5 profiles in <a href="#taiwan">Taiwan</a>, <a href="#asia">Asia</a>, and <a href="#europe">Europe</a>. Check the <b>Who can apply</b> line first — many scholarships depend on your nationality.</li><li>Use <a href="#compare">Compare</a> to see stipends, fees, tests, and deadlines side by side.</li><li>See our <a href="#top10">Top 10 Tier List</a> and the reasons behind each score.</li><li>Open the official page, confirm every fact, and apply before the deadline.</li></ol></div>
+ <div class="panel stack"><h2>Closest deadlines</h2><div class="scroll"><table><thead><tr><th>Deadline</th><th>Program</th><th>Badge</th></tr></thead><tbody>${[...P].filter(p=>/\d{4}/.test(p.dlShort)).sort((a,b)=>new Date(a.dlShort.replace("~","").replace("(est.)",""))-new Date(b.dlShort.replace("~","").replace("(est.)",""))).map(p=>`<tr><td class="deadline num">${esc(p.dlShort)}</td><td><a href="#${p.region}" data-jump="p-${p.id}">${esc(p.prog.split(" (")[0])}</a></td><td>${badge(p.badge)}</td></tr>`).join("")}</tbody></table></div></div>
+ <p class="note"><b>Important:</b> Scholarships change every year. Our facts were checked in October 2026. Always confirm on the official page before you send anything.</p></section>`,
+
+start:()=>`<section class="view"><div class="hero"><div class="eyebrow">Start Here</div><h1>Words, checklist, and timeline</h1><p class="lede">Read this page once before you open the program profiles.</p></div>
+ <div class="panel stack"><h2>Words to Know</h2><dl class="kv">
+ <dt>Tuition waiver</dt><dd>The school does not charge you tuition (all or part).</dd>
+ <dt>Stipend</dt><dd>Money paid to you every month for rent, food, and transport.</dd>
+ <dt>Full package</dt><dd>100% tuition waiver + a stipend that covers basic living costs in that city.</dd>
+ <dt>Competitive</dt><dd>Not everyone admitted gets the money. A committee chooses the best applicants.</dd>
+ <dt>Statement of Purpose (SOP)</dt><dd>An essay about why you want this program and what you will do after it.</dd>
+ <dt>Research proposal</dt><dd>A short plan for the research you want to do: question, methods, sources.</dd>
+ <dt>Transcript</dt><dd>The official list of your courses and grades.</dd>
+ <dt>Letter of expected graduation</dt><dd>A letter from your university saying you will graduate on a certain date.</dd>
+ <dt>Notarization</dt><dd>A notary or court confirms a copy or translation is true.</dd>
+ <dt>Authentication / legalization</dt><dd>A government office (for example a Taiwan or foreign representative office) confirms a document is real.</dd>
+ <dt>Apostille</dt><dd>A one-step authentication used between countries in the Hague Convention.</dd>
+ <dt>ECTS</dt><dd>European credit points. A 2-year master's = 120 ECTS.</dd>
+ <dt>Erasmus Mundus</dt><dd>EU-funded joint master's programs taught at 2+ universities in different countries.</dd>
+ <dt>MOE / MOFA / ICDF</dt><dd>Taiwan's Ministry of Education, Ministry of Foreign Affairs, and the International Cooperation and Development Fund — three Taiwan scholarship sources.</dd>
+ <dt>MEXT · CGS · GKS · SI</dt><dd>Government scholarships of Japan, China, Korea, and Sweden.</dd></dl></div>
+ <div class="grid2"><div class="panel stack"><h2>General application checklist</h2><ul class="clean"><li>Passport valid for the whole study period</li><li>Transcript (official, in English)</li><li>Diploma or letter of expected graduation</li><li>English proof: IELTS/TOEFL, or a letter that IBSC is taught in English</li><li>Statement of Purpose</li><li>Research proposal (research programs)</li><li>2 recommendation letters — ask professors <b>6 weeks</b> before the deadline</li><li>CV</li><li>Writing sample (your IBSC thesis or best paper)</li><li>Bank statement or scholarship proof</li><li>Application fee</li><li>Separate scholarship form (check each profile)</li></ul></div>
+ <div class="panel stack"><h2>Timeline (Fall 2027 entry)</h2><dl class="kv"><dt>Nov 2026</dt><dd>Book IELTS/TOEFL (and GRE if needed). Ask for recommendation letters.</dd><dt>Dec 2026</dt><dd><span class="deadline">2 Dec</span> ITASIA · <span class="deadline">31 Dec</span> Tsinghua GBJ for CGS scholarship.</dd><dt>Jan 2027</dt><dd><span class="deadline">10 Jan</span> Mundus Journalism · <span class="deadline">14 Jan</span> GLOCAL · <span class="deadline">15 Jan</span> Lund, Euroculture, Stipendium Hungaricum (expected).</dd><dt>Feb 2027</dt><dd>SI scholarship (Sweden). Taiwan offices open MOE scholarship rounds.</dd><dt>Mar 2027</dt><dd><span class="deadline">4 Mar</span> NCCU Round 2 (IMICS, GCIT, IMPIS).</dd><dt>Apr–May 2027</dt><dd>Results arrive. Accept one offer.</dd><dt>Jun–Aug 2027</dt><dd>Visa, housing, graduation documents.</dd><dt>Aug–Oct 2027</dt><dd>Programs start.</dd></dl></div></div>
+ <div class="panel stack"><h2>Tips on translations and authentication</h2><ul class="clean"><li>IBSC documents are usually issued in English. Ask your registrar for English copies of the diploma and transcript first — this often removes the need for translation.</li><li><b>Taiwan (NCCU):</b> documents not in English or Chinese need a notarized translation. For the MOE scholarship, translations must be authenticated by a Taiwan office abroad.</li><li><b>China (CUC):</b> notarized translation for documents not in Chinese or English.</li><li><b>Germany track (Mundus Journalism, Munich):</b> degrees from China, India, and Vietnam need an APS certificate — this takes weeks, so start early.</li><li>When you are not sure, email the admissions office and ask: “Do you need notarized copies, an apostille, or embassy legalization?” Save their reply.</li></ul></div></section>`,
+
+taiwan:()=>regionView("taiwan",["Taiwan","Stay where you already know the system. Three NCCU programs give a 100% tuition package through the MOE Taiwan Scholarship."]),
+asia:()=>regionView("asia",["Asia (outside Taiwan)","Japan, Singapore, China, and Thailand — from government scholarships to a university research stipend."]),
+europe:()=>regionView("europe",["Europe","Erasmus Mundus pays the highest stipends, but read each ‘Who can apply’ line carefully."]),
+
+compare:()=>`<section class="view"><div class="hero"><div class="eyebrow">Compare</div><h1>All 15 programs side by side</h1><p class="lede">Stipends are monthly, converted to NT$. Tap a program name to open its profile.</p></div>
+ <div class="scroll"><table><thead><tr><th>Program</th><th>Region</th><th>Degree</th><th>Badge</th><th>Stipend / month</th><th>App. fee</th><th>GRE/GMAT</th><th>Deadline</th><th>Score</th></tr></thead><tbody>
+ ${ranked.map(p=>`<tr><td><a href="#${p.region}" data-jump="p-${p.id}">${esc(p.prog.split(" (")[0].split(" — ")[0])}</a><br><small style="color:var(--muted)">${esc(p.uni.split(",")[0])}</small></td><td>${REG[p.region]}</td><td>${esc(p.deg)}</td><td>${badge(p.badge)}</td><td class="num">${ntd(p.fund.ntd)}</td><td class="num">${esc(p.feeNtd)}</td><td>${esc(p.gre)}</td><td class="deadline num">${esc(p.dlShort)}</td><td class="num">${p.total.toFixed(1)}</td></tr>`).join("")}
+ </tbody></table></div><p class="note">${RATE_NOTE}</p></section>`,
+
+top10:()=>{
+ const crit=[["Funding strength","35%","Full package or not, and how far the stipend goes in that city.","10 = full package with a stipend well above local basic costs; 5 = tuition cap not confirmed; 3 = stipend far below living costs.","Without money to live on, you cannot study. This is the main goal of the guide."],
+ ["Course fit with IBSC","30%","How closely the courses continue IBSC subjects: PR, branding, campaigns, media, research.","10 = the program is strategic communication itself; 5 = related field with a few communication courses.","A good fit means your IBSC credits and experience count, and you grow your specialty."],
+ ["Access for a 2027 graduate","20%","Can a senior apply now and qualify? Nationality limits, work experience, degree-in-hand rules, open deadlines.","10 = open to most nationalities, no work experience, deadline still ahead; 3 = most seniors cannot qualify this year.","A great scholarship is useless if you are not eligible yet."],
+ ["Application cost and effort","15%","Fees, extra tests (GRE), and unusual requirements.","10 = low fee, no extra tests; 5 = GRE required or several extra steps.","Tests and fees cost money and time during your senior year."]];
+ const tiers=["S","A","B","C"];
+ const tierName={S:"Tier S · 85+",A:"Tier A · 75–84.9",B:"Tier B · 70–74.9",C:"Tier C · below 70"};
+ let n=0;
+ const tierHTML=tiers.map(t=>{const items=top10.filter(p=>tierOf(p.total)===t);if(!items.length)return"";return `<div class="tier"><div class="tier-label t${t}" aria-label="${tierName[t]}">${t}</div><div class="tier-items">${items.map(p=>{n++;return `<div class="rank"><div class="n">${n}</div><div class="stack" style="gap:4px"><span class="mini-photo">[University image: ${esc(p.uni.split(",")[0])} — add photo + credit]</span><h4>${esc(p.prog.split(" (")[0].split(" — ")[0])}</h4><div style="font-size:15px;color:var(--muted)">${esc(p.uni)} · ${esc(p.city)}</div><p style="font-size:15px">${esc(p.fit)}</p><div class="meta">${badge(p.badge)} ${link("Program ↗",p.url)} ${link("University ↗",p.uniUrl)}</div></div><div class="score">${p.total.toFixed(1)}<small>/ 100</small><div class="bar"><i style="width:${p.total}%"></i></div></div></div>`}).join("")}</div></div>`}).join("");
+ return `<section class="view"><div class="hero"><div class="eyebrow">Top 10 Tier List</div><h1>Our ranking</h1><p class="lede">We scored every program from 1 to 10 on four criteria, multiplied by the weights, and turned the result into a score out of 100. <b>Full Package programs always rank above Partly Funded programs</b>, even when a partly funded program scores higher.</p></div>
+ <div class="scroll"><table><thead><tr><th>Criterion</th><th>Weight</th><th>What it measures</th><th>How we scored</th><th>Why it matters for IBSC</th></tr></thead><tbody>${crit.map(c=>`<tr><td><b>${c[0]}</b></td><td class="num">${c[1]}</td><td>${c[2]}</td><td>${c[3]}</td><td>${c[4]}</td></tr>`).join("")}</tbody></table></div>
+ <p class="note"><b>Method:</b> Score = (Funding × 0.35 + Fit × 0.30 + Access × 0.20 + Cost × 0.15) × 10. Ties are broken by Course fit. Funding gets the most weight because the guide is about studying without paying.</p>
+ ${tierHTML}
+ <div class="grid2"><div class="panel stack"><span class="eyebrow">Award</span><h2>🏅 Best for Funding</h2><p><b>NTU Singapore — Master of Communication Studies (Research).</b> It pays the highest stipend in this guide, SGD 2,900 a month (≈ NT$73,400), plus full tuition.</p></div>
+ <div class="panel stack"><span class="eyebrow">Award</span><h2>🎓 Best for Education</h2><p><b>Lund University — MSc Strategic Communication.</b> It is strategic communication itself, taught by a department that specializes in the field, with internship and exchange options.</p></div></div>
+ <div class="panel stack"><h2>Did not make the Top 10</h2><div class="scroll"><table><thead><tr><th>Program</th><th>Score</th><th>Why</th></tr></thead><tbody>
+ ${out5.map(p=>{const why={euroculture:"Full package, but you must already hold your degree by 15 Jan 2027, so seniors can only apply for 2028; weaker communication fit.",chula:"Best course fit in Asia, but the scholarship does not pay the THB 107,000 faculty fee each semester, so it is only partly funded.",ncku:"Strong branding courses, but full tuition coverage above NT$40,000 per semester is not confirmed.",stust:"Design-focused and tuition coverage above the MOE cap is not confirmed.",corvinus:"Excellent course fit, but the HUF 43,700 stipend (≈ NT$4,400) does not cover living costs in Budapest."}[p.id];return `<tr><td><a href="#${p.region}" data-jump="p-${p.id}">${esc(p.prog.split(" (")[0].split(" — ")[0])}</a> ${badge(p.badge)}</td><td class="num">${p.total.toFixed(1)}</td><td>${why}</td></tr>`}).join("")}
+ </tbody></table></div></div>
+ <div class="panel stack"><h2>Score details</h2><div class="scroll"><table><thead><tr><th>Program</th><th>Funding ×0.35</th><th>Fit ×0.30</th><th>Access ×0.20</th><th>Cost ×0.15</th><th>Total</th></tr></thead><tbody>${ranked.map(p=>`<tr><td>${esc(p.prog.split(" (")[0].split(" — ")[0])}</td><td class="num">${p.scores.fund}</td><td class="num">${p.scores.fit}</td><td class="num">${p.scores.access}</td><td class="num">${p.scores.cost}</td><td class="num"><b>${p.total.toFixed(1)}</b></td></tr>`).join("")}</tbody></table></div><p>See the full comparison of all 15 programs on the <a href="#compare">Compare</a> page.</p></div></section>`},
+
+about:()=>`<section class="view"><div class="hero"><div class="eyebrow">About and Sources</div><h1>Who made this and how</h1></div>
+ <div class="grid2"><div class="panel stack"><h2>Team</h2><dl class="kv"><dt>Member 1</dt><dd>________ · Personal Google Site: ________</dd><dt>Member 2</dt><dd>________ · Personal Google Site: ________</dd><dt>Member 3</dt><dd>________ · Personal Google Site: ________</dd><dt>Member 4</dt><dd>________ · Personal Google Site: ________</dd></dl><p><small>Course: Technical Communication · Instructor: Carlos Mercado · IBSC</small></p></div>
+ <div class="panel stack"><h2>AI tools we used</h2><dl class="kv"><dt>Tool #1 — Finder</dt><dd>________ (suggested programs and official links)</dd><dt>Tool #2 — Checker</dt><dd>Claude (checked each fact against official pages; found mistakes such as a closed Erasmus Mundus program and scholarships meant only for lecturers)</dd><dt>Human check</dt><dd>We opened every official page, took screenshots, and wrote the date checked.</dd></dl></div></div>
+ <div class="panel stack"><h2>All sources</h2><ul class="clean">${P.flatMap(p=>p.src).filter((s,i,a)=>a.findIndex(x=>x[1]===s[1])===i).map(s=>`<li>${link(s[0],s[1])}</li>`).join("")}<li>${link("MOE Taiwan Scholarship 2026 guidelines (TECO New York, PDF)","https://www.roc-taiwan.org/uploads/sites/109/2026/01/2026_Taiwan_Scholarship_Program_Guidelines.pdf")}</li></ul></div>
+ <p class="note">${RATE_NOTE} <b>Website last updated: 30 October 2026.</b></p></section>`
+};
+
+const app=document.getElementById("app");
+function render(){
+  let h=(location.hash||"#home").slice(1); if(!V[h]) h="home";
+  app.innerHTML=V[h]();
+  document.querySelectorAll("nav.tabs a").forEach(a=>a.removeAttribute("aria-current"));
+  document.querySelectorAll("nav.tabs a").forEach(a=>{if(a.getAttribute("href")==="#"+h)a.setAttribute("aria-current","page")});
+  window.scrollTo(0,0);
+}
+document.addEventListener("click",e=>{
+  const j=e.target.closest("[data-jump]"); if(!j) return;
+  const target=j.getAttribute("data-jump"), href=j.getAttribute("href");
+  const go=()=>{const el=document.getElementById(target); if(el){el.scrollIntoView({behavior:"smooth",block:"start"});}};
+  if(href && href!==location.hash){e.preventDefault(); location.hash=href; setTimeout(go,60);} else {e.preventDefault(); go();}
+});
+window.addEventListener("hashchange",render);
+render();
+</script>
+
+</body>
+</html>
