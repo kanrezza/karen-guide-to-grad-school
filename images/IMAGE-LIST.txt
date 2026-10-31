@@ -4,28 +4,28 @@ or show 'Image coming soon' until you add the file.
 
 NCCU, International Communication Studies (IMICS)
   images/imics-campus.jpg   in folder   credit: National Chengchi University (from our team's Taiwan research folder)
-  images/imics-funding.jpg   NEEDED   date taken: TO ADD
-  images/imics-requirements.jpg   NEEDED   date taken: TO ADD
+  images/imics-funding.jpg   from Drive   date taken: 31 October 2026
+  images/imics-requirements.jpg   from Drive   date taken: 28 October 2026
 
 MCU, International Affairs (GSIA)
-  images/mcu-campus.jpg   NEEDED   credit: TO ADD
-  images/mcu-funding.jpg   NEEDED   date taken: TO ADD
-  images/mcu-requirements.jpg   NEEDED   date taken: TO ADD
+  images/mcu-campus.jpg   from Drive   credit: Ming Chuan University (from our team's Taiwan research folder)
+  images/mcu-funding.jpg   from Drive   date taken: 31 October 2026
+  images/mcu-requirements.jpg   from Drive   date taken: 24 October 2026
 
 TNUA, Arts and Creative Industries (SAC)
   images/tnua-campus.jpg   in folder   credit: Taipei National University of the Arts (from our team's Taiwan research folder)
-  images/tnua-funding.jpg   NEEDED   date taken: TO ADD
-  images/tnua-requirements.jpg   NEEDED   date taken: TO ADD
+  images/tnua-funding.jpg   from Drive   date taken: 24 October 2026
+  images/tnua-requirements.jpg   from Drive   date taken: 28 October 2026
 
 STUST, Visual Communication Design (IVCD)
-  images/stust-campus.jpg   NEEDED   credit: TO ADD
-  images/stust-funding.jpg   NEEDED   date taken: TO ADD
-  images/stust-requirements.jpg   NEEDED   date taken: TO ADD
+  images/stust-campus.jpg   from Drive   credit: Southern Taiwan University of Science and Technology (from our team's Taiwan research folder)
+  images/stust-funding.jpg   from Drive   date taken: 28 October 2026
+  images/stust-requirements.jpg   from Drive   date taken: 24 October 2026
 
 NTUT, Interaction Design and Innovation
-  images/ntut-campus.jpg   NEEDED   credit: TO ADD
-  images/ntut-funding.jpg   NEEDED   date taken: TO ADD
-  images/ntut-requirements.jpg   NEEDED   date taken: TO ADD
+  images/ntut-campus.jpg   from Drive   credit: National Taipei University of Technology (from our team's Taiwan research folder)
+  images/ntut-funding.jpg   from Drive   date taken: 24 October 2026
+  images/ntut-requirements.jpg   from Drive   date taken: 28 October 2026
 
 NUS, Social Sciences (Economics by Research)
   images/nus-campus.jpg   in folder   credit: National University of Singapore
@@ -34,23 +34,23 @@ NUS, Social Sciences (Economics by Research)
 
 SNU, International Commerce (GSIS)
   images/snu-campus.jpg   in folder   credit: Official Seoul National University Photo Gallery
-  images/snu-funding.jpg   from Drive   date taken: TO ADD
-  images/snu-requirements.jpg   NEEDED   date taken: TO ADD
+  images/snu-funding.jpg   from Drive   date taken: 29 October 2026
+  images/snu-requirements.jpg   from Drive   date taken: 29 October 2026
 
 NTU, Communication Studies by Research (WKWSCI)
   images/ntu-campus.jpg   in folder   credit: Official Nanyang Technological University History Portal
   images/ntu-funding.jpg   NEEDED   date taken: TO ADD
-  images/ntu-requirements.jpg   from Drive   date taken: TO ADD
+  images/ntu-requirements.jpg   from Drive   date taken: 29 October 2026
 
 PKU, Public Administration (IMPA-CPPIC)
   images/pku-campus.jpg   in folder   credit: Official Peking University English Website
-  images/pku-funding.jpg   from Drive   date taken: TO ADD
-  images/pku-requirements.jpg   NEEDED   date taken: TO ADD
+  images/pku-funding.jpg   from Drive   date taken: 29 October 2026
+  images/pku-requirements.jpg   from Drive   date taken: 29 October 2026
 
 Yonsei, Global MBA
   images/yonsei-campus.jpg   from Drive   credit: Official Yonsei University English Website
-  images/yonsei-funding.jpg   from Drive   date taken: TO ADD
-  images/yonsei-requirements.jpg   NEEDED   date taken: TO ADD
+  images/yonsei-funding.jpg   from Drive   date taken: 29 October 2026
+  images/yonsei-requirements.jpg   from Drive   date taken: 29 October 2026
 
 Aarhus, Mundus Journalism
   images/mundus-campus.png   in folder   credit: Aarhus University
@@ -74,5 +74,5 @@ Lund, Strategic Communication
 
 Jyväskylä, Digital Marketing and Corporate Communication
   images/jyu-campus.jpg   from Drive   credit: University of Jyväskylä
-  images/jyu-funding.jpg   from Drive   date taken: TO ADD
-  images/jyu-requirements.jpg   from Drive   date taken: TO ADD
+  images/jyu-funding.jpg   from Drive   date taken: 29 October 2026
+  images/jyu-requirements.jpg   from Drive   date taken: 29 October 2026

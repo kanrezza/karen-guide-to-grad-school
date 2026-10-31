@@ -412,3 +412,21 @@ h3.sub{font-size:1.15rem;margin:1.75rem 0 .75rem}
   .sort select{flex:1;min-width:0}
   .sort{display:flex;width:100%}
 }
+
+/* ---------- Home (short version) ---------- */
+.hero2{background:var(--sheet);border:1px solid var(--line);border-radius:16px;padding:clamp(1.5rem,4vw,3rem);margin-bottom:1.5rem;border-left:8px solid var(--navy)}
+.hero2 h1{max-width:20ch;margin-bottom:.6rem}
+.hero2 .lead{margin-bottom:0}
+.hero2 .cta{margin:1.5rem 0 0}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;margin-bottom:1.5rem}
+.card3{background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:1.4rem 1.5rem}
+.card3 h2{font-size:1.25rem;margin-bottom:.6rem}
+.card3 p,.card3 ul,.card3 ol{margin:0}
+.card3 ul,.card3 ol{padding-left:1.2em}
+.card3 li{margin-bottom:.35rem}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem 2rem;color:var(--muted)}
+.legend p{margin:0}
+.legend .badge{margin-right:.35rem;vertical-align:.1em}
+.more-funds{margin-top:1rem;border-top:1px solid var(--line);padding-top:.6rem}
+.more-funds summary{cursor:pointer;font-weight:700;color:var(--navy)}
+@media (max-width:980px){.trio{grid-template-columns:1fr}}
