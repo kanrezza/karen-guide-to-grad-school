@@ -1,0 +1,62 @@
+Put photos and screenshots in this folder with these exact names.
+The website shows them automatically. Missing files show a grey box.
+
+ntu-campus.jpg        University photo: Nanyang Technological University (NTU), Wee Kim Wee School of Communication and Information
+ntu-funding.png       Screenshot of funding text: https://www.ntu.edu.sg/wkwsci/admissions/programmes/graduate-programmes/detail/master-of-communication-studies
+ntu-requirements.png  Screenshot of requirements text
+
+gbj-campus.jpg        University photo: Tsinghua University, School of Journalism and Communication
+gbj-funding.png       Screenshot of funding text: https://www.globalbusinessjournalism.com/application-requirements
+gbj-requirements.png  Screenshot of requirements text
+
+cuc-campus.jpg        University photo: Communication University of China (CUC)
+cuc-funding.png       Screenshot of funding text: https://icuc.cuc.edu.cn/7289/list.htm
+cuc-requirements.png  Screenshot of requirements text
+
+itasia-campus.jpg        University photo: The University of Tokyo
+itasia-funding.png       Screenshot of funding text: https://itasia.iii.u-tokyo.ac.jp/admissions
+itasia-requirements.png  Screenshot of requirements text
+
+chula-campus.jpg        University photo: Chulalongkorn University, Faculty of Communication Arts
+chula-funding.png       Screenshot of funding text: https://www.iscm.commarts.chula.ac.th/mscm-program
+chula-requirements.png  Screenshot of requirements text
+
+mundus-campus.jpg        University photo: Aarhus University (coordinator) + one Year-2 university
+mundus-funding.png       Screenshot of funding text: https://mundusjournalism.com/admissions/admission-requirements
+mundus-requirements.png  Screenshot of requirements text
+
+glocal-campus.jpg        University photo: University of Glasgow (coordinator) + 6 partners
+glocal-funding.png       Screenshot of funding text: https://www.eur.nl/en/master/global-markets-local-creativities-glocal
+glocal-requirements.png  Screenshot of requirements text
+
+lund-campus.jpg        University photo: Lund University
+lund-funding.png       Screenshot of funding text: https://www.lunduniversity.lu.se/study/strategic-communication-master-of-science-programme-SASKO
+lund-requirements.png  Screenshot of requirements text
+
+euroculture-campus.jpg        University photo: University of Groningen (coordinator) + consortium
+euroculture-funding.png       Screenshot of funding text: https://www.euroculturemaster.eu/erasmus-mundus-scholarship
+euroculture-requirements.png  Screenshot of requirements text
+
+corvinus-campus.jpg        University photo: Corvinus University of Budapest
+corvinus-funding.png       Screenshot of funding text: https://uni-corvinus.hu/post/landing-page/ma-communication-and-media-science/?lang=en
+corvinus-requirements.png  Screenshot of requirements text
+
+imics-campus.jpg        University photo: National Chengchi University (NCCU)
+imics-funding.png       Screenshot of funding text: https://www.imics.nccu.edu.tw/international-admission
+imics-requirements.png  Screenshot of requirements text
+
+gcit-campus.jpg        University photo: National Chengchi University (NCCU)
+gcit-funding.png       Screenshot of funding text: https://studyintaiwan.org/university/program/4788
+gcit-requirements.png  Screenshot of requirements text
+
+impis-campus.jpg        University photo: National Chengchi University (NCCU)
+impis-funding.png       Screenshot of funding text: https://impis.nccu.edu.tw/eng/PageDoc?fid=10740
+impis-requirements.png  Screenshot of requirements text
+
+ncku-campus.jpg        University photo: National Cheng Kung University (NCKU)
+ncku-funding.png       Screenshot of funding text: https://old.studyintaiwan.org/university/program/1891
+ncku-requirements.png  Screenshot of requirements text
+
+stust-campus.jpg        University photo: Southern Taiwan University of Science and Technology (STUST)
+stust-funding.png       Screenshot of funding text: https://vc.stust.edu.tw/en
+stust-requirements.png  Screenshot of requirements text
