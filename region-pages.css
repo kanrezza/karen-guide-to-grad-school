@@ -9,7 +9,8 @@
 .region-counts>span{display:flex;align-items:center;gap:.45rem;white-space:nowrap}
 .funding-dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
 .full-dot{background:var(--green)}.part-dot{background:var(--amber)}
-.region-page .glance{margin-bottom:2rem;scroll-margin-top:1rem}
+main.region-page{padding-bottom:2rem}
+.region-page .glance{margin-bottom:1rem;scroll-margin-top:1rem}
 .region-section-heading{margin-bottom:.8rem}
 .region-section-heading h2{font-size:1.2rem;margin:0}
 .overview-scroll{border:1px solid var(--line);border-radius:13px;background:var(--sheet);overflow:hidden}
@@ -95,7 +96,7 @@
 .region-page .courses{display:flex;flex-direction:column;gap:.5rem;list-style:none;padding:0;margin:0}
 .region-page .courses li{padding:.55rem .75rem;margin:0;border:1px solid var(--line);border-radius:7px;background:var(--sheet);text-align:center}
 
-/* Natural-height funding cards avoid an empty panel beside longer guidance. */
+/* Each funding fact is a single labeled row, without nested group headings. */
 .region-page .funding-section{border-top:0;padding:1.25rem 0 0}
 .region-page .prog .cost{padding:.8rem 1rem;margin:0 0 .9rem;border:1px solid var(--line);border-radius:8px;background:var(--tint);font-size:var(--profile-body);font-style:normal;text-align:center;max-width:none}
 .region-page .prog .cost strong{font-weight:600}
@@ -103,21 +104,23 @@
 .region-page .fund h4{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.6rem;margin:0 0 .6rem}
 .region-page .prog .funding-provider{font-size:var(--profile-small);font-weight:400;color:var(--muted);margin:0 0 1rem;text-align:center}
 .funding-provider span{font-weight:600}
-.funding-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:1.5rem}
-.funding-layout.single{grid-template-columns:1fr}
-.funding-benefits{padding:1.1rem;background:var(--tint);border:1px solid var(--line);border-radius:9px;text-align:center}
-.funding-layout h5,.funding-warning h5{font-size:var(--profile-small);font-weight:600;letter-spacing:0;line-height:1.5;text-transform:none;color:var(--muted);margin:0 0 .75rem;text-align:center}
-.region-page .fund-rows{display:grid;grid-template-columns:1fr;gap:.8rem;margin:0}
-.region-page .fund-rows>div{display:block;padding:0 0 .8rem;border-bottom:1px solid var(--line);background:none}
-.region-page .fund-rows>div:last-child{padding-bottom:0;border-bottom:0}
-.region-page .prog .fund-rows dt{font-size:var(--profile-small);font-weight:600;color:var(--muted);margin:0 0 .3rem}
-.region-page .prog .fund-rows dd{font-size:var(--profile-body);font-weight:400;color:var(--ink);margin:0;line-height:1.6}
+.funding-summary{margin:0;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.funding-summary>div{display:grid;grid-template-columns:12rem minmax(0,1fr);border-bottom:1px solid var(--line)}
+.funding-summary>div:last-child{border-bottom:0}
+.funding-summary>.financial-row+div:not(.financial-row){border-top:2px solid var(--line)}
+.region-page .prog .funding-summary dt{display:flex;align-items:center;justify-content:center;padding:.85rem 1rem;margin:0;background:var(--tint);border-right:1px solid var(--line);font-size:var(--profile-small);font-weight:600;color:var(--muted);text-align:center}
+.region-page .prog .funding-summary dd{padding:.85rem 1.1rem;margin:0;font-size:var(--profile-body);font-weight:400;color:var(--ink);line-height:1.6;text-align:center}
+.funding-summary .fund-points{width:fit-content;max-width:68ch;margin:.15rem auto 0}
 .region-page .prog .money-value{font:inherit;color:inherit;white-space:nowrap}
 .fund-points{padding-left:1.15rem;margin:.15rem 0 0;text-align:left}
 .fund-points li{padding-left:.1rem;margin-bottom:.3rem}
 .fund-points li:last-child{margin-bottom:0}
 .funding-warning{padding:1rem;background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:7px;margin-bottom:1rem}
-.funding-warning h5{color:var(--amber);margin-bottom:.45rem}
+.funding-warning h5{font-size:var(--profile-small);font-weight:600;letter-spacing:0;line-height:1.5;color:var(--amber);margin:0 0 .45rem;text-align:center}
+.funding-unverified{color:var(--amber)}
+.funding-evidence{margin-top:.5rem}
+.funding-evidence>summary{font-size:var(--profile-small);font-weight:600;color:var(--muted);cursor:pointer}
+.region-page .prog .funding-evidence p{margin:.5rem 0 0}
 .region-page .prog .fsrc{font-size:var(--profile-small);color:var(--muted);margin:1rem 0 0;text-align:center}
 .region-page .more-funds{font-size:var(--profile-body);margin-bottom:1rem}
 .region-page .more-funds>summary{font-weight:600;padding:.6rem;text-align:center;cursor:pointer}
@@ -206,7 +209,10 @@
  .profile-quick>div{grid-column:auto;padding:.85rem .65rem}
  .profile-quick>div:first-child{grid-column:1/-1}
  .profile-quick>div:nth-child(n+4){grid-column:auto}
- .study-grid,.funding-layout{grid-template-columns:1fr;gap:1rem}
+ .study-grid{grid-template-columns:1fr;gap:1rem}
+ .funding-summary>div{grid-template-columns:1fr}
+ .region-page .prog .funding-summary dt{padding:.65rem .85rem;border-right:0;border-bottom:1px solid var(--line)}
+ .region-page .prog .funding-summary dd{padding:.8rem .85rem}
  .study-grid,.region-page .fund{padding:1rem}
  .region-page .fields{grid-template-columns:1fr 1fr}
  .region-page .dls,.region-page .shots{grid-template-columns:1fr}

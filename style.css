@@ -245,10 +245,15 @@ figcaption{font-size:.88rem;color:var(--muted);margin-top:.45rem}
 .soon-box{max-width:52rem}
 
 /* footer */
-.site-foot{background:var(--sheet);border-top:1px solid var(--line);padding:2rem 0;font-size:.95rem}
-.foot-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem}
-.foot-title{font-weight:800;margin-bottom:.4rem}
-.rates{list-style:none;padding:0;margin:0 0 .5rem;font-variant-numeric:tabular-nums}
+.site-foot{background:var(--sheet);border-top:1px solid var(--line);padding:.875rem 0;font-size:.8125rem;line-height:1.5}
+.foot-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.65fr);gap:1.5rem;align-items:start}
+.foot-grid>div{min-width:0}
+.site-foot p{margin:0 0 .25rem}
+.site-foot p:last-child{margin-bottom:0}
+.site-foot .foot-title{font-size:.875rem;font-weight:800;margin-bottom:.3rem}
+.rates{display:flex;flex-wrap:wrap;gap:.3rem .7rem;list-style:none;padding:0;margin:0;font-variant-numeric:tabular-nums}
+.rates li{max-width:100%;overflow-wrap:anywhere}
+.rates li+li{border-left:1px solid var(--line2);padding-left:.7rem}
 
 /* responsive */
 @media (max-width:980px){
@@ -277,7 +282,8 @@ figcaption{font-size:.88rem;color:var(--muted);margin-top:.45rem}
   .stub .v{font-size:1.4rem}
   .fields,.words,.shots{grid-template-columns:1fr}
   .fund-rows div,.dls div,.badges div{grid-template-columns:1fr;gap:.15rem}
-  .foot-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr;gap:.75rem}
+  .rates li+li{border-left:0;padding-left:0}
   /* tables become stacked rows */
   .gl,.gl tbody,.gl tr,.gl th,.gl td,.req,.req tbody,.req tr,.req th,.req td{display:block;width:auto}
   .gl thead,.req thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
