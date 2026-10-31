@@ -110,10 +110,9 @@ main.region-page{padding-bottom:2rem}
 .funding-summary>.financial-row+div:not(.financial-row){border-top:2px solid var(--line)}
 .region-page .prog .funding-summary dt{display:flex;align-items:center;justify-content:center;padding:.85rem 1rem;margin:0;background:var(--tint);border-right:1px solid var(--line);font-size:var(--profile-small);font-weight:600;color:var(--muted);text-align:center}
 .region-page .prog .funding-summary dd{padding:.85rem 1.1rem;margin:0;font-size:var(--profile-body);font-weight:400;color:var(--ink);line-height:1.6;text-align:center}
-.funding-summary .fund-points{width:fit-content;max-width:68ch;margin:.15rem auto 0}
 .region-page .prog .money-value{font:inherit;color:inherit;white-space:nowrap}
-.fund-points{padding-left:1.15rem;margin:.15rem 0 0;text-align:left}
-.fund-points li{padding-left:.1rem;margin-bottom:.3rem}
+.fund-points{width:100%;padding-inline-start:1.25rem;margin:0;text-align:left;list-style-position:outside}
+.fund-points li{padding-left:0;margin-bottom:.3rem}
 .fund-points li:last-child{margin-bottom:0}
 .funding-warning{padding:1rem;background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:7px;margin-bottom:1rem}
 .funding-warning h5{font-size:var(--profile-small);font-weight:600;letter-spacing:0;line-height:1.5;color:var(--amber);margin:0 0 .45rem;text-align:center}
