@@ -4,11 +4,77 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Start Here | Guide to Graduate School</title>
-<meta name="description" content="Fully funded and partly funded master&#x27;s programs for IBSC students: funding, fees, documents and deadlines.">
+<meta name="description" content="Start your graduate-school application: key terms, a saved checklist, a 2027 planning timeline, and document tips for IBSC students.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,800;1,400&display=swap">
 <link rel="stylesheet" href="style.css?v=7">
+<style>
+
+/* Start Here: page-local extension of the Home airmail theme. */
+.start-page{--start-blue:#1f3a6e;--start-green:#0f6a45;--start-red:#b8312a}
+.start-page .hero3{padding-bottom:2.8rem;margin-bottom:1.25rem}
+.start-page .hero3 h1{font-size:clamp(2.8rem,6vw,4.3rem);margin-bottom:.3rem}
+.start-page .hero3 p{max-width:56ch;font-size:1.15rem}
+.start-page .hero3 .eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:0 0 .9rem;color:#c2d4f4}
+.start-route{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.85rem;margin-bottom:3rem}
+.start-stop{--acc:#1f3a6e;--wash:#e8eefb;display:flex;align-items:center;gap:.8rem;background:var(--sheet);border:1px solid var(--line);border-top:4px solid var(--acc);border-radius:13px;padding:1rem;text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
+.start-stop:hover{transform:translateY(-3px);box-shadow:0 6px 18px #1f3a6e12}
+.start-stop:nth-child(2){--acc:#0f6a45;--wash:#e3f4ea}.start-stop:nth-child(3){--acc:#b8312a;--wash:#fcebe8}.start-stop:nth-child(4){--acc:#1f3a6e;--wash:#e8eefb}
+.stop-no{flex:none;display:grid;place-items:center;width:2.4rem;height:2.4rem;background:var(--wash);color:var(--acc);font-size:.9rem;font-weight:800;border-radius:9px}
+.start-stop strong{display:block;font-size:.95rem;line-height:1.25}.start-stop small{display:block;color:var(--muted);font-size:.8rem;margin-top:.2rem}
+.start-section{margin-bottom:3.5rem;scroll-margin-top:1.5rem}
+.start-heading{display:flex;gap:1rem;align-items:center;margin-bottom:1.3rem}
+.start-heading .ico{flex:none;margin:0;--acc:var(--start-blue)}
+.start-heading h2{margin:0 0 .25rem;font-size:clamp(1.5rem,2.7vw,1.95rem)}
+.start-heading p{margin:0;color:var(--muted);font-size:1rem}
+.start-heading .section-num{color:var(--start-blue);font-size:.8rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.3rem}
+.start-green .ico{--acc:var(--start-green)}.start-green h2,.start-green .section-num{color:var(--green)}
+.start-red .ico{--acc:var(--start-red)}.start-red h2,.start-red .section-num{color:var(--red)}
+.start-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem}
+.start-card{--acc:#1f3a6e;--tintc:#e8eefb;--accink:var(--navy);border:1px solid var(--line);border-top:5px solid var(--acc);border-radius:16px;padding:1.4rem;background:linear-gradient(180deg,var(--tintc),var(--sheet) 7rem)}
+.start-card.green{--acc:#0f6a45;--tintc:#e3f4ea;--accink:var(--green)}.start-card.red{--acc:#b8312a;--tintc:#fcebe8;--accink:var(--red)}
+.start-card h3{color:var(--accink);font-size:1.15rem;margin-bottom:1rem}
+.start-words{margin:0}.start-words>div+div{border-top:1px solid var(--line);padding-top:.8rem;margin-top:.8rem}
+.start-words dt{font-size:.98rem;font-weight:800;margin-bottom:.2rem}.start-words dd{margin:0;font-size:.94rem;line-height:1.5;color:var(--muted)}
+.start-aside{border-radius:12px;background:var(--sheet);border:1px solid var(--line);padding:1rem 1.25rem;margin-top:1rem;font-size:.94rem;line-height:1.5}
+.start-aside p:last-child{margin-bottom:0}.start-aside strong{color:var(--navy)}
+.start-acronyms{margin-top:1rem;border:1px solid var(--line);border-radius:12px;background:var(--sheet);overflow:hidden}
+.start-acronyms summary{padding:1rem 1.25rem;cursor:pointer;font-size:.96rem;font-weight:800;color:var(--navy)}
+.start-acronyms dl{display:grid;grid-template-columns:1fr 1fr;gap:1rem 2rem;margin:0;padding:.25rem 1.25rem 1.25rem}
+.start-acronyms dt{font-weight:800;font-size:.9rem}.start-acronyms dd{font-size:.9rem;color:var(--muted);margin:.2rem 0 0}
+.start-progress{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;background:var(--green-bg);border:1px solid color-mix(in srgb,var(--green) 24%,transparent);border-radius:12px;padding:1rem 1.2rem;margin-bottom:1rem}
+.progress-label{flex:1 1 16rem}.progress-label strong{color:var(--green);font-size:1rem}.progress-label p{margin:.15rem 0 0;font-size:.85rem;color:var(--muted)}
+.start-progress progress{width:clamp(140px,24vw,260px);height:10px;appearance:none;border:0;border-radius:99px;overflow:hidden;background:var(--sheet);accent-color:var(--green)}
+.start-progress progress::-webkit-progress-bar{background:var(--sheet);border-radius:99px}.start-progress progress::-webkit-progress-value{background:var(--green);border-radius:99px}.start-progress progress::-moz-progress-bar{background:var(--green);border-radius:99px}
+.check-count{font-weight:800;font-size:.9rem;color:var(--green);white-space:nowrap}
+.start-check-group{--acc:#0f6a45;--tintc:#e3f4ea;--accink:var(--green)}
+.start-check-group h3{display:flex;gap:.65rem;align-items:center}.group-no{display:grid;place-items:center;width:1.8rem;height:1.8rem;border-radius:7px;background:var(--acc);color:#fff;font-size:.8rem}
+.start-checks{list-style:none;padding:0;margin:0}.start-checks li{display:flex;gap:.7rem;align-items:flex-start;padding:.9rem 0;border-top:1px solid var(--line)}
+.start-checks input{appearance:auto;accent-color:var(--green);width:1.15rem;height:1.15rem;flex:none;margin:.2rem 0 0;cursor:pointer}
+.start-checks label{cursor:pointer;display:block;font-size:.92rem;line-height:1.45}.start-checks label strong{display:block;font-size:.97rem;margin-bottom:.25rem}.start-checks label span{color:var(--muted)}
+.start-checks input:checked+label strong{color:var(--green)}.start-checks input:checked+label strong::after{content:' ✓'}
+.start-checks input:checked+label span{color:var(--muted)}
+.start-timeline{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.start-month{background:var(--sheet);border:1px solid var(--line);border-radius:15px;overflow:hidden}
+.month-top{display:flex;align-items:center;justify-content:space-between;gap:.6rem;background:var(--red-bg);padding:.9rem 1.15rem;border-bottom:1px solid var(--line)}
+.month-top h3{color:var(--red);margin:0;font-size:1.1rem}.month-top span{font-size:.72rem;font-weight:800;color:var(--red);letter-spacing:.06em}
+.month-body{padding:1rem 1.15rem 1.15rem}.month-body>p{font-weight:800;font-size:.97rem;margin-bottom:.65rem}
+.month-body ul{list-style:none;padding:0;margin:0;font-size:.91rem;color:var(--muted)}.month-body li{margin:0 0 .7rem;padding-left:.9rem;position:relative}.month-body li::before{content:'';position:absolute;left:0;top:.55em;width:4px;height:4px;border-radius:50%;background:var(--red)}.month-body li:last-child{margin-bottom:0}
+.month-body a{font-weight:600}.date-label{display:inline-block;font-size:.7rem;font-weight:800;line-height:1.2;color:var(--amber);background:var(--amber-bg);padding:.2em .4em;border-radius:4px;margin-left:.2em;vertical-align:.1em}
+.start-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.process-card{background:var(--sheet);border:1px solid var(--line);border-radius:14px;padding:1.25rem;position:relative;border-top:4px solid var(--start-blue)}
+.process-no{display:grid;place-items:center;width:2.3rem;height:2.3rem;border-radius:10px;background:#e8eefb;color:#1f3a6e;font-weight:800;margin-bottom:.9rem}
+.process-card h3{font-size:1.05rem}.process-card p{margin:0;color:var(--muted);font-size:.92rem;line-height:1.5}
+.start-final{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-top:1.2rem;background:var(--navy);color:var(--navy-ink);border-radius:15px;padding:1.5rem}
+.start-final h3{margin:0 0 .3rem;font-size:1.2rem}.start-final p{margin:0;font-size:.95rem}.start-final .btn{background:var(--sheet);color:var(--navy);border-color:var(--sheet);white-space:nowrap}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .start-card{--tintc:#1b2740}:root:not([data-theme="light"]) .start-card.green,:root:not([data-theme="light"]) .start-check-group{--tintc:#13301f}:root:not([data-theme="light"]) .start-card.red{--tintc:#35181a}}
+:root[data-theme="dark"] .start-card{--tintc:#1b2740}:root[data-theme="dark"] .start-card.green,:root[data-theme="dark"] .start-check-group{--tintc:#13301f}:root[data-theme="dark"] .start-card.red{--tintc:#35181a}
+@media(max-width:980px){.start-route,.start-process{grid-template-columns:repeat(2,minmax(0,1fr))}.start-grid,.start-timeline{grid-template-columns:1fr}.start-route{margin-bottom:2.5rem}.start-section{margin-bottom:2.5rem}}
+@media(max-width:560px){.start-route{grid-template-columns:1fr 1fr;gap:.6rem}.start-stop{display:block;padding:.85rem}.stop-no{margin-bottom:.6rem;width:2rem;height:2rem}.start-stop strong{font-size:.9rem}.start-stop small{font-size:.75rem}.start-heading{align-items:flex-start;gap:.8rem}.start-heading .ico{width:2.6rem;height:2.6rem;border-radius:10px}.start-heading h2{font-size:1.5rem}.start-heading p{font-size:.94rem}.start-card{padding:1.2rem}.start-process,.start-acronyms dl{grid-template-columns:1fr}.start-progress{gap:.65rem}.start-progress progress{flex:1;min-width:130px}.start-final{padding:1.25rem}.start-final .btn{width:100%;text-align:center}}
+@media(prefers-reduced-motion:reduce){.start-stop{transition:none}.start-stop:hover{transform:none}}
+@media print{.start-route,.start-progress{display:none}.start-grid,.start-timeline,.start-process{grid-template-columns:1fr 1fr}.start-card,.start-month,.process-card{break-inside:avoid}.start-page .hero3{padding:1.5rem}.start-final{display:none}}
+</style>
 <script>function imgFail(i){var n=(i.getAttribute('data-next')||'').split('|').filter(Boolean);if(n.length){i.setAttribute('data-next',n.slice(1).join('|'));i.src=n[0];}else{var f=i.closest('.frame');if(f)f.classList.add('noimg');i.remove();}}</script>
 </head>
 <body>
@@ -19,34 +85,98 @@
   </div>
   <nav class="wrap" aria-label="Main menu"><ul class="nav"><li><a href="index.html">Home</a></li><li><a href="start-here.html" aria-current="page">Start Here</a></li><li><a href="taiwan.html">Taiwan</a></li><li><a href="asia.html">Asia</a></li><li><a href="europe.html">Europe</a></li><li><a href="compare.html">Compare</a></li><li><a href="top-10.html">Top 10 Tier List</a></li><li><a href="about.html">About and Sources</a></li></ul></nav>
 </header>
-<main id="main" class="wrap">
-<header class="page-head">
-  <h1>Start Here</h1>
-  <p class="lead">Read this page before the program profiles.</p>
-  <ul class="toc-inline"><li><a href="#words">Words to Know</a></li><li><a href="#checklist">Checklist</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#tips">Translation tips</a></li></ul>
-</header>
-<section class="block" id="words" aria-labelledby="words-t">
-  <h2 id="words-t">Words to Know</h2>
-  <dl class="words"><div><dt>Full package</dt><dd>100% tuition waiver plus a monthly stipend.</dd></div><div><dt>Partly funded</dt><dd>The scholarship pays only part of your costs.</dd></div><div><dt>Tuition waiver</dt><dd>The school does not charge some or all tuition.</dd></div><div><dt>Stipend</dt><dd>Monthly money for rent, food and transport.</dd></div><div><dt>Competitive</dt><dd>A committee chooses. Meeting the rules is not enough.</dd></div><div><dt>Separate application</dt><dd>A second form for the scholarship, apart from admission.</dd></div><div><dt>MOE / MOFA / ICDF</dt><dd>Taiwan government scholarships. You apply through the Taiwan office in your home country.</dd></div><div><dt>GKS, BGS, GSFS, GAP</dt><dd>Korean, Beijing, SNU and Singapore scholarship schemes.</dd></div><div><dt>Erasmus Mundus</dt><dd>A joint master&#x27;s degree run by several European universities, with EU scholarships.</dd></div><div><dt>ECTS</dt><dd>European credits. 60 ECTS = one year of study.</dd></div><div><dt>CEFR (B1, B2, C1)</dt><dd>Language levels. B1 = intermediate, C1 = advanced.</dd></div><div><dt>EMI certificate</dt><dd>A letter from your university saying your degree is taught in English.</dd></div><div><dt>Transcript</dt><dd>The official list of your courses and grades.</dd></div><div><dt>Expected-graduation certificate</dt><dd>A letter that says when you will graduate.</dd></div><div><dt>Statement of Purpose</dt><dd>An essay on why you want the program and your goals.</dd></div><div><dt>Study plan / Research proposal</dt><dd>A short plan of what you will study or research.</dd></div><div><dt>Notarized translation</dt><dd>A translation that a notary confirms is correct.</dd></div><div><dt>Apostille / Legalization</dt><dd>Stamps that prove a document is real abroad. Taiwan uses legalization.</dd></div><div><dt>Proof of funds</dt><dd>A bank statement showing you can pay living costs.</dd></div></dl>
+<main id="main" class="wrap start-page">
+<section class="hero3" aria-labelledby="start-title">
+  <p class="eyebrow">Your next chapter, step by step</p>
+  <h1 id="start-title">Start Here</h1>
+  <p>Know the terms. Prepare your documents. Plan your next move.<br>A practical starting point for IBSC students applying for a master's in 2027.</p>
 </section>
-<section class="block" id="checklist" aria-labelledby="check-t">
-  <h2 id="check-t">General application checklist</h2>
-  <ol class="checklist"><li><input type="checkbox" id="ck0"><label for="ck0">Passport valid for the whole program.</label></li><li><input type="checkbox" id="ck1"><label for="ck1">English transcript and expected-graduation certificate from YZU.</label></li><li><input type="checkbox" id="ck2"><label for="ck2">EMI certificate (proof that IBSC is taught in English).</label></li><li><input type="checkbox" id="ck3"><label for="ck3">IELTS or TOEFL score (IELTS 5.0 to 7.0, by program).</label></li><li><input type="checkbox" id="ck4"><label for="ck4">2 recommendation letters. Ask 6 weeks before the deadline.</label></li><li><input type="checkbox" id="ck5"><label for="ck5">Statement of Purpose, within each program&#x27;s word limit.</label></li><li><input type="checkbox" id="ck6"><label for="ck6">Study plan or research proposal, if required.</label></li><li><input type="checkbox" id="ck7"><label for="ck7">CV, and a portfolio or video if required.</label></li><li><input type="checkbox" id="ck8"><label for="ck8">Bank statement (Taiwan programs: NT$ 120,000 to 200,000).</label></li><li><input type="checkbox" id="ck9"><label for="ck9">Application fee paid. Keep the receipt.</label></li><li><input type="checkbox" id="ck10"><label for="ck10">Separate scholarship form sent, if there is one.</label></li></ol>
-  <p class="small">Your ticks are saved in this browser.</p>
+<nav class="start-route" aria-label="On this page">
+  <a class="start-stop" href="#words"><span class="stop-no">01</span><span><strong>Words to Know</strong><small>Understand the essentials</small></span></a>
+  <a class="start-stop" href="#checklist"><span class="stop-no">02</span><span><strong>Application checklist</strong><small>Build your application folder</small></span></a>
+  <a class="start-stop" href="#timeline"><span class="stop-no">03</span><span><strong>Your timeline</strong><small>Make room for every step</small></span></a>
+  <a class="start-stop" href="#tips"><span class="stop-no">04</span><span><strong>Document tips</strong><small>Translate and verify</small></span></a>
+</nav>
+<section class="start-section" id="words" aria-labelledby="words-t">
+<div class="start-heading "><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H4z"/><path d="M20 4h-4a3 3 0 0 0-3 3v14a4 4 0 0 1 4-3h3z"/></svg></span><div><p class="section-num">01 / Your application guide</p><h2 id="words-t">Words to Know</h2><p>A few useful terms before you open the program profiles.</p></div></div>
+<div class="start-grid">
+  <section class="start-card" aria-labelledby="money-t"><h3 id="money-t">Understand the funding</h3>
+    <dl class="start-words">
+      <div><dt>Full package</dt><dd>Full tuition coverage plus a monthly stipend through the named scholarship. Check what you still pay yourself.</dd></div>
+      <div><dt>Partly funded</dt><dd>Some support is available, but tuition or living costs remain. A full tuition waiver alone belongs here.</dd></div>
+      <div><dt>Tuition waiver / stipend</dt><dd>A waiver reduces tuition. A stipend is money paid regularly for expenses such as food, rent and transport.</dd></div>
+      <div><dt>Competitive scholarship</dt><dd>Eligible applicants are assessed for a limited number of awards. Admission does not guarantee funding.</dd></div>
+    </dl>
+  </section>
+  <section class="start-card green" aria-labelledby="admission-t"><h3 id="admission-t">Read the requirements</h3>
+    <dl class="start-words">
+      <div><dt>Separate application</dt><dd>Admission and the scholarship need different forms or submissions. Their deadlines may also differ.</dd></div>
+      <div><dt>ECTS</dt><dd>The European credit system. A full-time academic year is usually 60 ECTS; subject-credit requirements still need checking.</dd></div>
+      <div><dt>CEFR</dt><dd>A language scale from A1 to C2. The program decides which tests and scores demonstrate its required level.</dd></div>
+      <div><dt>EMI certificate</dt><dd>An official letter showing your degree was taught in English. Ask whether the program accepts it instead of a test.</dd></div>
+    </dl>
+  </section>
+  <section class="start-card red" aria-labelledby="paperwork-t"><h3 id="paperwork-t">Know your documents</h3>
+    <dl class="start-words">
+      <div><dt>Transcript / degree certificate</dt><dd>Your transcript lists courses and grades. Your degree certificate proves that you completed the degree.</dd></div>
+      <div><dt>Expected-graduation certificate</dt><dd>A university letter stating when you expect to graduate. Check if it is accepted and when the final degree is due.</dd></div>
+      <div><dt>Statement of Purpose / research proposal</dt><dd>The statement explains your fit and goals. A proposal sets out a research question and how you plan to study it.</dd></div>
+      <div><dt>Proof of funds</dt><dd>Evidence of available money, usually a bank statement or accepted scholarship letter. The amount and format vary.</dd></div>
+    </dl>
+  </section>
+</div>
+<details class="start-acronyms"><summary>Scholarship abbreviations you will see in this guide</summary><dl>
+  <div><dt>MOE / MOFA / TaiwanICDF</dt><dd>Taiwan's Ministry of Education, Ministry of Foreign Affairs, and International Cooperation and Development Fund. Each has its own eligibility rules.</dd></div>
+  <div><dt>GKS / GSFS / BGS</dt><dd>Global Korea Scholarship, SNU's Graduate Scholarship for Excellent Foreign Students, and Beijing Government Scholarship.</dd></div>
+  <div><dt>Erasmus Mundus</dt><dd>Joint master's programs delivered by university partnerships, with competitive EU-funded scholarships on eligible routes.</dd></div>
+  <div><dt>GAP</dt><dd>Graduate Assistantship Programme: teaching or other assigned duties attached to some research scholarships. It is not a separate scholarship.</dd></div>
+</dl></details>
 </section>
-<section class="block" id="timeline" aria-labelledby="tl-t">
-  <h2 id="tl-t">Timeline for 2027 entry</h2>
-  <ol class="timeline"><li><p class="when">Nov 2026</p><p>NUS (1 Nov), NTU (15 Nov), STUST (30 Nov) close.</p></li><li><p class="when">Dec 2026</p><p>PKU closes 25 Dec. NTUT and ICDF open 1 Dec.</p></li><li><p class="when">Jan 2027</p><p>Aarhus (10 Jan), Gothenburg and Lund (15 Jan), Jyväskylä (21 Jan) close.</p></li><li><p class="when">Feb 2027</p><p>MOE and MOFA Taiwan Scholarships open 1 Feb. Gothenburg fee due 1 Feb.</p></li><li><p class="when">Mar 2027</p><p>CLIDE (7 Mar), NCCU (about 9 Mar), NTUT (10 Mar), ICDF (15 Mar), MOE and MOFA (31 Mar) close.</p></li><li><p class="when">Apr to Jun 2027</p><p>Results arrive. MCU closes 31 May. Accept one offer.</p></li><li><p class="when">Jul to Sep 2027</p><p>Visa and housing. Programs start in August or September.</p></li></ol>
+<section class="start-section" id="checklist" aria-labelledby="check-t">
+<div class="start-heading start-green"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 6 2 2 3-3M4 13l2 2 3-3M12 7h8M12 14h8M12 21h8"/><circle cx="6" cy="21" r="1"/></svg></span><div><p class="section-num">02 / Your application guide</p><h2 id="check-t">General application checklist</h2><p>Start one folder for each program. Tick a task when it is complete or confirmed as not required.</p></div></div>
+<div class="start-progress">
+  <div class="progress-label"><strong>Your preparation, at a glance</strong><p id="save-status">Your ticks are saved in this browser.</p></div>
+  <progress id="application-progress" value="0" max="12" aria-label="Application preparation completed">0 of 12</progress>
+  <span class="check-count" id="check-count" aria-live="polite" aria-atomic="true">0 of 12 ready</span>
+</div>
+<div class="start-grid">
+<section class="start-card start-check-group" aria-labelledby="group-0"><h3 id="group-0"><span class="group-no">1</span>Gather the essentials</h3><ul class="start-checks"><li><input type="checkbox" id="start-task-0"><label for="start-task-0"><strong>Check your eligibility</strong><span>Confirm nationality, subject credits, degree timing and any work-experience rules for admission and funding.</span></label></li>
+<li><input type="checkbox" id="start-task-1"><label for="start-task-1"><strong>Prepare identity documents</strong><span>Check the passport validity and identity documents required by your destination and program.</span></label></li>
+<li><input type="checkbox" id="start-task-2"><label for="start-task-2"><strong>Request academic records</strong><span>Ask YZU for English transcripts and a degree or accepted expected-graduation certificate.</span></label></li>
+<li><input type="checkbox" id="start-task-3"><label for="start-task-3"><strong>Confirm language evidence</strong><span>Prepare an accepted test result or get written confirmation that your EMI certificate qualifies for an exemption.</span></label></li>
+</ul></section><section class="start-card start-check-group" aria-labelledby="group-1"><h3 id="group-1"><span class="group-no">2</span>Tell your story</h3><ul class="start-checks"><li><input type="checkbox" id="start-task-4"><label for="start-task-4"><strong>Prepare your CV</strong><span>Highlight IBSC research, campaigns, media work, internships and other relevant experience.</span></label></li>
+<li><input type="checkbox" id="start-task-5"><label for="start-task-5"><strong>Write for each program</strong><span>Follow the prompt and word limit for the personal statement, study plan or research proposal.</span></label></li>
+<li><input type="checkbox" id="start-task-6"><label for="start-task-6"><strong>Arrange your references</strong><span>Check the number and type of referees. Ask early and share the submission instructions and deadline.</span></label></li>
+<li><input type="checkbox" id="start-task-7"><label for="start-task-7"><strong>Collect supporting work</strong><span>Prepare a portfolio, writing samples or motivation video only where requested.</span></label></li>
+</ul></section><section class="start-card start-check-group" aria-labelledby="group-2"><h3 id="group-2"><span class="group-no">3</span>Check and submit</h3><ul class="start-checks"><li><input type="checkbox" id="start-task-8"><label for="start-task-8"><strong>Review document rules</strong><span>Check translations, certification, file formats and whether verification is needed now or after admission.</span></label></li>
+<li><input type="checkbox" id="start-task-9"><label for="start-task-9"><strong>Plan the costs</strong><span>Check the application fee, proof-of-funds rules and expenses the scholarship does not cover.</span></label></li>
+<li><input type="checkbox" id="start-task-10"><label for="start-task-10"><strong>Submit both applications</strong><span>Complete admission and any separate scholarship application before their own deadlines and time zones.</span></label></li>
+<li><input type="checkbox" id="start-task-11"><label for="start-task-11"><strong>Save and follow up</strong><span>Keep submission confirmations and receipts. Check your inbox, portal and referee-submission status.</span></label></li>
+</ul></section>
+</div>
 </section>
-<section class="block" id="tips" aria-labelledby="tips-t">
-  <h2 id="tips-t">Tips on translations and authentication</h2>
-  <ul class="tips">
-    <li>Ask YZU for English documents first. Then most programs need no translation.</li>
-    <li>Translate only documents that are not in English (or Chinese for Taiwan).</li>
-    <li>SNU and Yonsei ask for an apostille. Taiwan cannot issue one, so ask about legalization at the Korean Mission in Taipei.</li>
-    <li>PKU verifies foreign degrees through CSCSE.</li>
-    <li>If a program says nothing, email admissions and keep the reply.</li>
-  </ul>
+<section class="start-section" id="timeline" aria-labelledby="tl-t">
+<div class="start-heading start-red"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 11h18M7 15h2M13 15h2M7 18h2"/></svg></span><div><p class="section-num">03 / Your application guide</p><h2 id="tl-t">Timeline for 2027 entry</h2><p>Use this as a planning map, then check the official call for your chosen intake.</p></div></div>
+<ol class="start-timeline">
+  <li class="start-month"><div class="month-top"><h3>Nov–Dec 2026</h3><span>PREPARE &amp; APPLY</span></div><div class="month-body"><p>Get your first applications ready.</p><ul><li>Our profiles list <a href="asia.html#nus">NUS: 1 Nov</a>, <a href="asia.html#ntu">NTU: 15 Nov</a> and <a href="asia.html#pku">PKU: 25 Dec</a>. Check the intended cycle.</li><li><a href="taiwan.html#ntut">NTUT</a> and the TaiwanICDF scholarship window are listed as opening in December.</li><li>Request English records, language evidence and references before the earliest deadline.</li></ul></div></li>
+  <li class="start-month"><div class="month-top"><h3>January 2027</h3><span>EUROPEAN CALLS</span></div><div class="month-body"><p>Finish your program-specific work.</p><ul><li>Profile dates: <a href="europe.html#mundus">Mundus Journalism: 10 Jan</a>; <a href="europe.html#gothenburg">Gothenburg</a> and <a href="europe.html#lund">Lund: 15 Jan</a>; <a href="europe.html#jyu">Jyväskylä: 21 Jan</a>.</li><li>Check the deadline's local time and the separate dates for documents or fee payment.</li><li>Upload work samples, motivation letters or videos in the requested format.</li></ul></div></li>
+  <li class="start-month"><div class="month-top"><h3>February 2027</h3><span>FUNDING STEPS</span></div><div class="month-body"><p>Give scholarships their own calendar.</p><ul><li>MOE and MOFA Taiwan Scholarship applications usually begin around February. Confirm your overseas mission's dates and eligibility.</li><li>Check separate scholarship instructions for <a href="europe.html#lund">Lund</a> and <a href="europe.html#gothenburg">Gothenburg</a>.</li><li>Gothenburg's profile lists <strong>1 Feb</strong> for fee payment and supporting documents.</li></ul></div></li>
+  <li class="start-month"><div class="month-top"><h3>March 2027</h3><span>CHECK THE DETAILS</span></div><div class="month-body"><p>Keep admission and funding dates apart.</p><ul><li><a href="europe.html#clide">CLIDE: 7 Mar</a> <span class="date-label">reported</span>; <a href="taiwan.html#imics">NCCU: about 9 Mar</a> <span class="date-label">estimated</span>; <a href="taiwan.html#ntut">NTUT: 10 Mar</a> in the profiles.</li><li><strong>15 Mar</strong> is the listed ICDF scholarship deadline. Confirm <a href="taiwan.html#tnua">SAC's</a> program participation and separate admission date.</li><li>Check your overseas mission's closing dates for MOE and MOFA awards.</li></ul></div></li>
+  <li class="start-month"><div class="month-top"><h3>Apr–Jun 2027</h3><span>COMPARE OFFERS</span></div><div class="month-body"><p>Read the offer and the funding letter.</p><ul><li>Track results and any interviews or requests for additional documents.</li><li><a href="taiwan.html#mcu">MCU's fall profile</a> lists <strong>31 May</strong>. Confirm the current admission call.</li><li>Compare tuition, stipend duration, renewal conditions and your remaining costs before accepting.</li></ul></div></li>
+  <li class="start-month"><div class="month-top"><h3>Jul–Sep 2027</h3><span>GET READY TO GO</span></div><div class="month-body"><p>Complete the steps after your offer.</p><ul><li>Submit your final degree and any verified documents by the university's deadline.</li><li>Arrange your visa or residence permission, housing, insurance and travel as required.</li><li>Check orientation, registration and arrival dates; the start date differs by program.</li></ul></div></li>
+</ol>
+<aside class="start-aside"><p><strong>Check the intake, not just the year.</strong> STUST's listed 30 November 2026 deadline is for a February 2027 start, which may be before you graduate. The SNU and Yonsei calls currently listed in the guide have closed. Use their official sites to find the next applicable round.</p></aside>
+</section>
+<section class="start-section" id="tips" aria-labelledby="tips-t">
+<div class="start-heading "><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/></svg></span><div><p class="section-num">04 / Your application guide</p><h2 id="tips-t">Translations &amp; authentication</h2><p>Make sure your documents are accepted before paying for extra processing.</p></div></div>
+<div class="start-process">
+  <section class="process-card"><span class="process-no">1</span><h3>Ask YZU first</h3><p>Request official English versions of your transcript and degree or expected-graduation certificate. Use the same name as on your passport.</p></section>
+  <section class="process-card"><span class="process-no">2</span><h3>Read the exact rules</h3><p>Check accepted languages, original or copy requirements, and who may certify a translation. A university-issued English document may remove the need to translate it.</p></section>
+  <section class="process-card"><span class="process-no">3</span><h3>Confirm verification</h3><p>Authentication checks a document's official origin. Follow the receiving university's instructions for the country that issued your documents, including any legalization or apostille route.</p></section>
+  <section class="process-card"><span class="process-no">4</span><h3>Keep a complete set</h3><p>Save clear scans of the original, translation and certification together. Check whether verification is due at application, after an offer or at registration.</p></section>
+</div>
+<aside class="start-aside"><p><strong>Translation and authentication are different.</strong> A certified or notarized translation follows the institution's rules for an accepted translation. It does not automatically replace verification of the original academic document. If instructions are unclear, email admissions and keep the written reply.</p></aside>
+<div class="start-final"><div><h3>Ready to build your shortlist?</h3><p>Explore the 15 profiles and check the funding route you can apply for.</p></div><a class="btn" href="compare.html">Compare programs <span aria-hidden="true">↗</span></a></div>
 </section>
 </main>
 <footer class="site-foot"><div class="wrap foot-grid">
@@ -61,25 +191,31 @@
   </div>
 </div></footer>
 <script>
-(function(){
-  var t=new Date();t.setHours(0,0,0,0);
-  document.querySelectorAll('[data-date]').forEach(function(el){
-    var d=new Date(el.getAttribute('data-date')+'T00:00:00');
-    var n=Math.round((d-t)/864e5), out=el.querySelector('.left');
-    el.classList.remove('closed','soon');
-    if(n<0){el.classList.add('closed');if(out)out.textContent='Closed';}
-    else{if(n<=14)el.classList.add('soon');if(out)out.textContent=n===0?'Closes today':(n===1?'1 day left':n+' days left');}
-  });
-  var list=document.querySelector('.next-list');
-  if(list){var shown=0;list.querySelectorAll('li').forEach(function(li){if(li.classList.contains('closed')||shown>=6){li.hidden=true;}else{shown++;}});}
-  var boxes=document.querySelectorAll('.checklist input[type=checkbox]');
-  if(boxes.length){
-    var saved={};try{saved=JSON.parse(localStorage.getItem('gtgs-checklist')||'{}');}catch(err){}
-    boxes.forEach(function(b){
-      if(saved[b.id])b.checked=true;
-      b.addEventListener('change',function(){saved[b.id]=b.checked;try{localStorage.setItem('gtgs-checklist',JSON.stringify(saved));}catch(err){}});
-    });
+(function () {
+  var boxes = Array.from(document.querySelectorAll('.start-checks input[type="checkbox"]'));
+  var progress = document.getElementById('application-progress');
+  var count = document.getElementById('check-count');
+  var status = document.getElementById('save-status');
+  var key = 'gtgs-start-checklist-v2';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(key) || '{}') || {}; }
+  catch (error) { status.textContent = 'Ticks work here, but could not be restored from this browser.'; }
+  function update() {
+    var done = boxes.filter(function (box) { return box.checked; }).length;
+    progress.value = done;
+    progress.textContent = done + ' of ' + boxes.length;
+    count.textContent = done + ' of ' + boxes.length + (done === boxes.length ? ' ready — well done!' : ' ready');
   }
+  boxes.forEach(function (box) {
+    box.checked = saved[box.id] === true;
+    box.addEventListener('change', function () {
+      saved[box.id] = box.checked;
+      try { localStorage.setItem(key, JSON.stringify(saved)); }
+      catch (error) { status.textContent = 'Ticks work for this visit, but this browser is not saving them.'; }
+      update();
+    });
+  });
+  update();
 })();
 </script>
 </body>
