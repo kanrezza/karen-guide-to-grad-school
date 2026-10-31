@@ -1,9 +1,9 @@
 Images for the website. Put each file in this folder with exactly this name.
-Asia and Europe images load from the team's Google Drive automatically (they must stay shared as 'Anyone with the link').
-A file saved here is used only if the Drive image cannot load.
+Files marked 'in folder' are already here. Others load from the team's Google Drive (keep them shared as 'Anyone with the link'),
+or show 'Image coming soon' until you add the file.
 
 NCCU, International Communication Studies (IMICS)
-  images/imics-campus.jpg   NEEDED   credit: TO ADD
+  images/imics-campus.jpg   in folder   credit: National Chengchi University (from our team's Taiwan research folder)
   images/imics-funding.jpg   NEEDED   date taken: TO ADD
   images/imics-requirements.jpg   NEEDED   date taken: TO ADD
 
@@ -13,7 +13,7 @@ MCU, International Affairs (GSIA)
   images/mcu-requirements.jpg   NEEDED   date taken: TO ADD
 
 TNUA, Arts and Creative Industries (SAC)
-  images/tnua-campus.jpg   NEEDED   credit: TO ADD
+  images/tnua-campus.jpg   in folder   credit: Taipei National University of the Arts (from our team's Taiwan research folder)
   images/tnua-funding.jpg   NEEDED   date taken: TO ADD
   images/tnua-requirements.jpg   NEEDED   date taken: TO ADD
 
@@ -28,51 +28,51 @@ NTUT, Interaction Design and Innovation
   images/ntut-requirements.jpg   NEEDED   date taken: TO ADD
 
 NUS, Social Sciences (Economics by Research)
-  images/nus-campus.jpg   (from Drive)   credit: National University of Singapore
-  images/nus-funding.jpg   (from Drive)   date taken: 29 October 2026
-  images/nus-requirements.jpg   (from Drive)   date taken: 29 October 2026
+  images/nus-campus.jpg   in folder   credit: National University of Singapore
+  images/nus-funding.jpg   from Drive   date taken: 29 October 2026
+  images/nus-requirements.jpg   from Drive   date taken: 29 October 2026
 
 SNU, International Commerce (GSIS)
-  images/snu-campus.jpg   (from Drive)   credit: Official Seoul National University Photo Gallery
-  images/snu-funding.jpg   (from Drive)   date taken: TO ADD
+  images/snu-campus.jpg   in folder   credit: Official Seoul National University Photo Gallery
+  images/snu-funding.jpg   from Drive   date taken: TO ADD
   images/snu-requirements.jpg   NEEDED   date taken: TO ADD
 
-NTU, Communication Research (WKWSCI)
-  images/ntu-campus.jpg   (from Drive)   credit: Official Nanyang Technological University History Portal
+NTU, Communication Studies by Research (WKWSCI)
+  images/ntu-campus.jpg   in folder   credit: Official Nanyang Technological University History Portal
   images/ntu-funding.jpg   NEEDED   date taken: TO ADD
-  images/ntu-requirements.jpg   (from Drive)   date taken: TO ADD
+  images/ntu-requirements.jpg   from Drive   date taken: TO ADD
 
 PKU, Public Administration (IMPA-CPPIC)
-  images/pku-campus.jpg   (from Drive)   credit: Official Peking University English Website
-  images/pku-funding.jpg   (from Drive)   date taken: TO ADD
+  images/pku-campus.jpg   in folder   credit: Official Peking University English Website
+  images/pku-funding.jpg   from Drive   date taken: TO ADD
   images/pku-requirements.jpg   NEEDED   date taken: TO ADD
 
 Yonsei, Global MBA
-  images/yonsei-campus.jpg   (from Drive)   credit: Official Yonsei University English Website
-  images/yonsei-funding.jpg   (from Drive)   date taken: TO ADD
+  images/yonsei-campus.jpg   from Drive   credit: Official Yonsei University English Website
+  images/yonsei-funding.jpg   from Drive   date taken: TO ADD
   images/yonsei-requirements.jpg   NEEDED   date taken: TO ADD
 
 Aarhus, Mundus Journalism
-  images/mundus-campus.jpg   (from Drive)   credit: Aarhus University
-  images/mundus-funding.jpg   (from Drive)   date taken: 30 October 2026
-  images/mundus-requirements.jpg   (from Drive)   date taken: 30 October 2026
+  images/mundus-campus.png   in folder   credit: Aarhus University
+  images/mundus-funding.jpg   from Drive   date taken: 30 October 2026
+  images/mundus-requirements.jpg   from Drive   date taken: 30 October 2026
 
 CLIDE, Intercultural Leadership (Erasmus Mundus)
-  images/clide-campus.jpg   (from Drive)   credit: CLIDE Erasmus Mundus Consortium
-  images/clide-funding.jpg   (from Drive)   date taken: 30 October 2026
-  images/clide-requirements.jpg   (from Drive)   date taken: 30 October 2026
+  images/clide-campus.jpg   in folder   credit: Nicolaus Copernicus University in Toruń (umk.pl)
+  images/clide-funding.jpg   from Drive   date taken: 30 October 2026
+  images/clide-requirements.jpg   from Drive   date taken: 30 October 2026
 
 Gothenburg, Digital Communication
-  images/gothenburg-campus.jpg   (from Drive)   credit: University of Gothenburg
-  images/gothenburg-funding.jpg   (from Drive)   date taken: 30 October 2026
-  images/gothenburg-requirements.jpg   (from Drive)   date taken: 30 October 2026
+  images/gothenburg-campus.webp   in folder   credit: University of Gothenburg
+  images/gothenburg-funding.jpg   from Drive   date taken: 30 October 2026
+  images/gothenburg-requirements.jpg   from Drive   date taken: 30 October 2026
 
 Lund, Strategic Communication
-  images/lund-campus.jpg   (from Drive)   credit: Lund University
-  images/lund-funding.jpg   (from Drive)   date taken: 30 October 2026
-  images/lund-requirements.jpg   (from Drive)   date taken: 30 October 2026
+  images/lund-campus.webp   in folder   credit: Lund University
+  images/lund-funding.jpg   from Drive   date taken: 30 October 2026
+  images/lund-requirements.jpg   from Drive   date taken: 30 October 2026
 
 Jyväskylä, Digital Marketing and Corporate Communication
-  images/jyu-campus.jpg   (from Drive)   credit: University of Jyväskylä
-  images/jyu-funding.jpg   (from Drive)   date taken: TO ADD
-  images/jyu-requirements.jpg   (from Drive)   date taken: TO ADD
+  images/jyu-campus.jpg   from Drive   credit: University of Jyväskylä
+  images/jyu-funding.jpg   from Drive   date taken: TO ADD
+  images/jyu-requirements.jpg   from Drive   date taken: TO ADD
