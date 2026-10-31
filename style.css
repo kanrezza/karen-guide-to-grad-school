@@ -430,3 +430,10 @@ h3.sub{font-size:1.15rem;margin:1.75rem 0 .75rem}
 .more-funds{margin-top:1rem;border-top:1px solid var(--line);padding-top:.6rem}
 .more-funds summary{cursor:pointer;font-weight:700;color:var(--navy)}
 @media (max-width:980px){.trio{grid-template-columns:1fr}}
+
+.req th,.req td{padding:.5rem .75rem;line-height:1.45}
+.req .stc{width:8.5rem}
+
+.home-head{margin-bottom:1.5rem}
+.home-head h1{margin-bottom:.3rem}
+.card3 li .badge{vertical-align:.1em}
