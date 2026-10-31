@@ -88,28 +88,28 @@ main.region-page{padding-bottom:2rem}
 .region-page .pc p{max-width:none}
 .region-page .prog .label{font-size:var(--profile-small);font-weight:600;color:var(--muted);margin:.8rem 0 .35rem}
 .study-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:1.5rem;padding:1.25rem;margin-bottom:.25rem;border:1px solid var(--line);border-radius:10px;background:var(--tint)}
-.region-page .study-grid .psec{padding:0;border:0;text-align:center}
+.region-page .study-grid .psec{padding:0;border:0;text-align:left}
 .region-page .study-notes .psec+.psec{margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--line)}
 .region-page .study-grid .psec>h3,.study-courses h4{margin:0 0 .6rem}
 .study-grid p:last-child{margin-bottom:0}
-.study-courses{text-align:center}
+.study-courses{text-align:left}
 .region-page .courses{display:flex;flex-direction:column;gap:.5rem;list-style:none;padding:0;margin:0}
-.region-page .courses li{padding:.55rem .75rem;margin:0;border:1px solid var(--line);border-radius:7px;background:var(--sheet);text-align:center}
+.region-page .courses li{padding:.55rem .75rem;margin:0;border:1px solid var(--line);border-radius:7px;background:var(--sheet);text-align:left}
 
 /* Each funding fact is a single labeled row, without nested group headings. */
 .region-page .funding-section{border-top:0;padding:1.25rem 0 0}
-.region-page .prog .cost{padding:.8rem 1rem;margin:0 0 .9rem;border:1px solid var(--line);border-radius:8px;background:var(--tint);font-size:var(--profile-body);font-style:normal;text-align:center;max-width:none}
+.region-page .prog .cost{padding:.8rem 1rem;margin:0 0 .9rem;border:1px solid var(--line);border-radius:8px;background:var(--tint);font-size:var(--profile-body);font-style:normal;text-align:left;max-width:none}
 .region-page .prog .cost strong{font-weight:600}
 .region-page .fund{padding:1.25rem;margin:0 0 1rem;border:1px solid var(--line);border-radius:10px}
 .region-page .fund h4{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.6rem;margin:0 0 .6rem}
-.region-page .prog .funding-provider{font-size:var(--profile-small);font-weight:400;color:var(--muted);margin:0 0 1rem;text-align:center}
+.region-page .prog .funding-provider{font-size:var(--profile-small);font-weight:400;color:var(--muted);margin:0 0 1rem;text-align:left}
 .funding-provider span{font-weight:600}
 .funding-summary{margin:0;border:1px solid var(--line);border-radius:9px;overflow:hidden}
 .funding-summary>div{display:grid;grid-template-columns:12rem minmax(0,1fr);border-bottom:1px solid var(--line)}
 .funding-summary>div:last-child{border-bottom:0}
 .funding-summary>.financial-row+div:not(.financial-row){border-top:2px solid var(--line)}
 .region-page .prog .funding-summary dt{display:flex;align-items:center;justify-content:center;padding:.85rem 1rem;margin:0;background:var(--tint);border-right:1px solid var(--line);font-size:var(--profile-small);font-weight:600;color:var(--muted);text-align:center}
-.region-page .prog .funding-summary dd{padding:.85rem 1.1rem;margin:0;font-size:var(--profile-body);font-weight:400;color:var(--ink);line-height:1.6;text-align:center}
+.region-page .prog .funding-summary dd{padding:.85rem 1.1rem;margin:0;font-size:var(--profile-body);font-weight:400;color:var(--ink);line-height:1.6;text-align:left}
 .region-page .prog .money-value{font:inherit;color:inherit;white-space:nowrap}
 .fund-points{width:100%;padding-inline-start:1.25rem;margin:0;text-align:left;list-style-position:outside}
 .fund-points li{padding-left:0;margin-bottom:.3rem}
@@ -120,7 +120,7 @@ main.region-page{padding-bottom:2rem}
 .funding-evidence{margin-top:.5rem}
 .funding-evidence>summary{font-size:var(--profile-small);font-weight:600;color:var(--muted);cursor:pointer}
 .region-page .prog .funding-evidence p{margin:.5rem 0 0}
-.region-page .prog .fsrc{font-size:var(--profile-small);color:var(--muted);margin:1rem 0 0;text-align:center}
+.region-page .prog .fsrc{font-size:var(--profile-small);color:var(--muted);margin:1rem 0 0;text-align:left}
 .region-page .more-funds{font-size:var(--profile-body);margin-bottom:1rem}
 .region-page .more-funds>summary{font-weight:600;padding:.6rem;text-align:center;cursor:pointer}
 .region-page .more-funds[open]>summary{margin-bottom:.75rem}
@@ -128,7 +128,7 @@ main.region-page{padding-bottom:2rem}
 /* Admission and scholarship dates are peers, including .hot dates. */
 .region-page .application-section{border:0;padding:1rem 0 1.25rem}
 .region-page .dls{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.7rem;margin:0}
-.region-page .dls>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;padding:1rem;border:1px solid var(--line);border-radius:9px;background:var(--tint);text-align:center}
+.region-page .dls>div{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.4rem;padding:1rem;border:1px solid var(--line);border-radius:9px;background:var(--tint);text-align:left}
 .region-page .prog .dls dt{font-size:var(--profile-small);font-weight:600;color:var(--muted);margin:0}
 .region-page .prog .dls dd,.region-page .prog .dls .hot dd{font-size:var(--profile-body);font-weight:400;font-style:normal;line-height:1.6;color:var(--ink);margin:0}
 .region-page .psec.profile-detail{padding:0;border:1px solid var(--line);border-radius:9px;margin:0 0 .65rem;background:var(--sheet);overflow:hidden}
@@ -140,7 +140,7 @@ main.region-page{padding-bottom:2rem}
 .region-page .detail-hint{display:none}
 .region-page .profile-detail>.pc{padding:1rem;background:var(--sheet)}
 .region-page .fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:0}
-.region-page .fields>div{min-width:0;text-align:center}
+.region-page .fields>div{min-width:0;text-align:left}
 .region-page .prog .fields dt{font-size:var(--profile-small);font-weight:600;color:var(--muted);margin-bottom:.25rem}
 .region-page .fields dd{margin:0}
 .region-page .profile-detail .req{font-size:var(--profile-body)}
