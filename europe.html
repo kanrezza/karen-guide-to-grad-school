@@ -171,7 +171,7 @@
 </div></details>
 <p class="back"><a href="#glance">Back to comparison ↑</a></p>
 </article>
-</td></tr></tbody></table></div><p class="overview-note">Sorted by funding, highest first: full packages, then monthly stipend. Select a program for details.</p></section>
+</td></tr></tbody></table></div><p class="overview-note">Full package first. Monthly stipend: high to low.</p></section>
 
 
 
@@ -217,6 +217,25 @@
   document.querySelectorAll('.overview-table tr.closed, .profile-quick > div.closed').forEach(function (item) {
     var status = item.querySelector('.deadline-status');
     if (status) status.textContent = 'Closed — check next round';
+  });
+  // Keep each comparison row and its inline profile together when sorting.
+  var tableBody = document.querySelector('.overview-table > tbody');
+  var orderedRows = Array.from(tableBody.querySelectorAll(':scope > .overview-row')).map(function (row, index) {
+    var amount = row.querySelector('[data-label="Monthly stipend"] strong').textContent.trim();
+    var match = amount.match(/NT\$\s*([\d,]+)/);
+    var stipend = match ? Number(match[1].replace(/,/g, '')) : /not confirmed|not stated|unverified|unknown/i.test(amount) ? -1 : 0;
+    return {row: row, index: index, full: !!row.querySelector('.badge.full'), stipend: stipend};
+  });
+  orderedRows.sort(function (a, b) {
+    return Number(b.full) - Number(a.full) || b.stipend - a.stipend || a.index - b.index;
+  });
+  orderedRows.forEach(function (item, index) {
+    var id = item.row.querySelector('[data-profile-open]').getAttribute('data-profile-open');
+    var profileRow = document.getElementById(id + '-row');
+    tableBody.appendChild(item.row);
+    tableBody.appendChild(profileRow);
+    var number = profileRow.querySelector('.profile-index');
+    if (number) number.textContent = String(index + 1).padStart(2, '0') + ' / 05';
   });
   var profiles = Array.from(document.querySelectorAll('article.prog'));
   var rows = Array.from(document.querySelectorAll('[data-profile-row]'));
