@@ -4,12 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Compare | Guide to Graduate School</title>
-<meta name="description" content="Fully funded and partly funded master&#x27;s programs for IBSC students: funding, fees, documents and deadlines.">
+<meta name="description" content="Compare 15 graduate programs for IBSC students by funding, stipend, tuition, fees, tests and deadline.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,800;1,400&display=swap">
 <link rel="stylesheet" href="style.css?v=9">
-<script>function imgFail(i){var n=(i.getAttribute('data-next')||'').split('|').filter(Boolean);if(n.length){i.setAttribute('data-next',n.slice(1).join('|'));i.src=n[0];}else{var f=i.closest('.frame');if(f)f.classList.add('noimg');i.remove();}}</script>
+<link rel="stylesheet" href="phase4.css?v=1">
+<link rel="stylesheet" href="phase4-compare.css?v=1">
+<script src="phase4-compare.js?v=1" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -19,48 +21,193 @@
   </div>
   <nav class="wrap" aria-label="Main menu"><ul class="nav"><li><a href="index.html">Home</a></li><li><a href="start-here.html">Start Here</a></li><li><a href="taiwan.html">Taiwan</a></li><li><a href="asia.html">Asia</a></li><li><a href="europe.html">Europe</a></li><li><a href="compare.html" aria-current="page">Compare</a></li><li><a href="top-10.html">Top 10 Tier List</a></li><li><a href="about.html">About and Sources</a></li></ul></nav>
 </header>
-<main id="main" class="wrap">
-<header class="page-head">
-  <h1>Compare</h1>
-  <p class="lead">All 15 programs in one table. Select a name to open the profile.</p>
+<main id="main" class="wrap p4-page compare-page" data-view="essentials">
+<header class="p4-header">
+  <div><p class="p4-eyebrow">15 programs · One view</p><h1>Compare</h1><p class="p4-lead">Find your fit by funding, cost and deadline.</p></div>
+  <dl class="p4-tally"><div><dt>Programs</dt><dd>15</dd></div><div><dt>Full package</dt><dd>9</dd></div><div><dt>Partly funded</dt><dd>6</dd></div></dl>
 </header>
-<section class="cmp-wrap" aria-labelledby="cmp-t">
-  <h2 id="cmp-t" class="sr">Comparison table</h2>
-  <div class="controls" role="group" aria-label="Filter and sort">
-    <div class="seg" role="group" aria-label="Region">
-      <button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="taiwan" aria-pressed="false">Taiwan</button><button type="button" data-f="asia" aria-pressed="false">Asia</button><button type="button" data-f="europe" aria-pressed="false">Europe</button>
-    </div>
-    <label class="chk"><input type="checkbox" id="onlyfull"> Full package only</label>
-    <label class="sort">Sort by
-      <select id="sortby"><option value="rank">Rank</option><option value="date">Deadline</option><option value="stip">Stipend</option></select>
-    </label>
-    <p class="count-line" aria-live="polite"><span id="shown">15</span> shown</p>
+<div class="cmp-intro"><p>One main scholarship per program. Rank follows <a href="top-10.html">Phase 4</a>.</p><a class="cmp-ranking-link" href="top-10.html">Explore the Top 10 <span aria-hidden="true">↗</span></a></div>
+<section class="cmp-workspace" aria-labelledby="cmp-heading">
+<h2 id="cmp-heading" class="sr">Compare all 15 programs</h2>
+<form class="cmp-toolbar" role="search" aria-label="Find and filter programs">
+  <div class="cmp-search-row">
+    <label class="cmp-search"><span class="sr">Search programs, universities or scholarships</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="cmp-search" type="search" placeholder="Search program, university or scholarship" autocomplete="off"></label>
+    <button class="cmp-reset" type="reset">Reset</button>
   </div>
-  <div class="tablewrap"><table class="gl cmp" id="cmp">
-    <thead><tr><th scope="col">Rank</th><th scope="col">Program</th><th scope="col">Funding</th><th scope="col">Stipend / month</th><th scope="col">Tuition covered</th><th scope="col">Application fee</th><th scope="col">GRE / GMAT</th><th scope="col">Apply by</th></tr></thead>
-    <tbody><tr data-region="asia" data-badge="full" data-rank="1" data-stip="73631" data-date="2026-11-15"><td class="rkc" data-l="Rank"><span class="rk">1</span></td><th scope="row"><a href="asia.html#ntu">NTU, Communication Studies by Research (WKWSCI)</a><span class="u">Asia</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 73,631</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b></td><td class="num" data-l="Application fee"><b class="nv">NT$ 1,371</b></td><td data-l="GRE / GMAT">Not required</td><td class="dlc" data-l="Apply by"><strong>15 Nov 2026</strong> <span class="left">15 days left</span></td></tr><tr data-region="europe" data-badge="full" data-rank="2" data-stip="50505" data-date="2027-01-10"><td class="rkc" data-l="Rank"><span class="rk">2</span></td><th scope="row"><a href="europe.html#mundus">Aarhus, Mundus Journalism</a><span class="u">Europe</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 50,505</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b></td><td class="num" data-l="Application fee"><b class="nv">Not confirmed</b></td><td data-l="GRE / GMAT">Not listed</td><td class="dlc" data-l="Apply by"><strong>10 Jan 2027</strong> <span class="left">71 days left</span></td></tr><tr data-region="taiwan" data-badge="full" data-rank="3" data-stip="18000" data-date="2027-03-15"><td class="rkc" data-l="Rank"><span class="rk">3</span></td><th scope="row"><a href="taiwan.html#tnua">TNUA, Arts and Creative Industries (SAC)</a><span class="u">Taiwan</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span><small>TaiwanICDF — 2027 program list pending</small></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 18,000</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b></td><td class="num" data-l="Application fee"><b class="nv">NT$ 2,000</b></td><td data-l="GRE / GMAT">Not listed</td><td class="dlc" data-l="Apply by"><strong>15 Mar 2027</strong> <span class="left">135 days left</span></td></tr><tr data-region="asia" data-badge="full" data-rank="4" data-stip="31950" data-date="2026-03-20"><td class="rkc" data-l="Rank"><span class="rk">4</span></td><th scope="row"><a href="asia.html#yonsei">Yonsei, English Language and Literature (MA)</a><span class="u">Asia</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span><small>GKS-G University Track</small></td><td class="num" data-l="Stipend / month"><b class="nv">Approx. NT$ 31,950</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b><small>2 degree years; language year if needed</small></td><td class="num" data-l="Application fee"><b class="nv">Free</b><small>GKS University Track</small></td><td data-l="GRE / GMAT">Optional</td><td class="dlc" data-l="Apply by"><strong>20 Mar 2026</strong> <span class="left"></span><small>17:00 KST; source intake reference</small></td></tr><tr data-region="europe" data-badge="full" data-rank="5" data-stip="50505" data-date="2027-03-07"><td class="rkc" data-l="Rank"><span class="rk">5</span></td><th scope="row"><a href="europe.html#clide">CLIDE, Intercultural Leadership (Erasmus Mundus)</a><span class="u">Europe</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 50,505</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b></td><td class="num" data-l="Application fee"><b class="nv">Not stated</b></td><td data-l="GRE / GMAT">Not listed</td><td class="dlc" data-l="Apply by"><strong>7 Mar 2027</strong> <span class="left">127 days left</span></td></tr><tr data-region="taiwan" data-badge="full" data-rank="6" data-stip="20000" data-date="2027-05-31"><td class="rkc" data-l="Rank"><span class="rk">6</span></td><th scope="row"><a href="taiwan.html#mcu">MCU, International Affairs (GSIA)</a><span class="u">Taiwan</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span><small>MOE Taiwan Scholarship</small></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 20,000</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b><small>2026–27 top-up; 2027–28 pending</small></td><td class="num" data-l="Application fee"><b class="nv">NT$ 1,800</b></td><td data-l="GRE / GMAT">Not required</td><td class="dlc" data-l="Apply by"><strong>31 May 2027</strong> <span class="left">212 days left</span></td></tr><tr data-region="asia" data-badge="full" data-rank="7" data-stip="13410" data-date="2026-12-25"><td class="rkc" data-l="Rank"><span class="rk">7</span></td><th scope="row"><a href="asia.html#pku">PKU, Public Administration (IMPA-CPPIC)</a><span class="u">Asia</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span><small>Beijing Government Scholarship (BGS) Type A</small></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 13,410</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b><small>2-year BGS Type A award</small></td><td class="num" data-l="Application fee"><b class="nv">NT$ 3,576</b></td><td data-l="GRE / GMAT">GRE optional; GMAT not accepted</td><td class="dlc" data-l="Apply by"><strong>25 Dec 2026</strong> <span class="left"></span><small>BGS deadline: 15 Jun 2027</small></td></tr><tr data-region="asia" data-badge="full" data-rank="8" data-stip="11575" data-date="2026-07-09"><td class="rkc" data-l="Rank"><span class="rk">8</span></td><th scope="row"><a href="asia.html#snu">SNU, International Commerce (GSIS)</a><span class="u">Asia</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span><small>GSFS</small></td><td class="num" data-l="Stipend / month"><b class="nv">At least NT$ 11,575</b><small>Varies by department</small></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b><small>Up to 2 years</small></td><td class="num" data-l="Application fee"><b class="nv">NT$ 2,084</b></td><td data-l="GRE / GMAT">Optional</td><td class="dlc" data-l="Apply by"><strong>9 Jul 2026</strong> <span class="left"></span><small>Source intake reference</small></td></tr><tr data-region="asia" data-badge="full" data-rank="9" data-stip="73631" data-date="2026-11-01"><td class="rkc" data-l="Rank"><span class="rk">9</span></td><th scope="row"><a href="asia.html#nus">NUS, Social Sciences (Economics by Research)</a><span class="u">Asia</span></th><td data-l="Funding"><span class="badge full sm">FULL PACKAGE</span><small>NUS Research Scholarship + GAP</small></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 73,631</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b></td><td class="num" data-l="Application fee"><b class="nv">NT$ 1,270</b></td><td data-l="GRE / GMAT">GRE optional</td><td class="dlc" data-l="Apply by"><strong>1 Nov 2026</strong> <span class="left"></span></td></tr><tr data-region="europe" data-badge="part" data-rank="10" data-stip="0" data-date="2027-01-15"><td class="rkc" data-l="Rank"><span class="rk">10</span></td><th scope="row"><a href="europe.html#lund">Lund, Strategic Communication</a><span class="u">Europe</span></th><td data-l="Funding"><span class="badge part sm">PARTLY FUNDED</span></td><td class="num" data-l="Stipend / month"><b class="nv">None</b></td><td class="num" data-l="Tuition covered"><b class="nv">Up to 100%</b></td><td class="num" data-l="Application fee"><b class="nv">NT$ 2,988</b></td><td data-l="GRE / GMAT">Not required</td><td class="dlc" data-l="Apply by"><strong>15 Jan 2027</strong> <span class="left">76 days left</span></td></tr><tr data-region="taiwan" data-badge="part" data-rank="11" data-stip="10000" data-date="2027-03-04"><td class="rkc" data-l="Rank"><span class="rk">11</span></td><th scope="row"><a href="taiwan.html#imics">NCCU, International Communication Studies (IMICS)</a><span class="u">Taiwan</span></th><td data-l="Funding"><span class="badge part sm">PARTLY FUNDED</span><small>NCCU Pilot Scholarship</small></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 10,000</b></td><td class="num" data-l="Tuition covered"><b class="nv">Tuition &amp; fees</b><small>Credit fees excluded</small></td><td class="num" data-l="Application fee"><b class="nv">Required</b></td><td data-l="GRE / GMAT">Not listed</td><td class="dlc" data-l="Apply by"><strong>4 Mar 2027</strong> <span class="left">123 days left</span></td></tr><tr data-region="europe" data-badge="part" data-rank="12" data-stip="0" data-date="2027-01-15"><td class="rkc" data-l="Rank"><span class="rk">12</span></td><th scope="row"><a href="europe.html#gothenburg">Gothenburg, Digital Communication</a><span class="u">Europe</span></th><td data-l="Funding"><span class="badge part sm">PARTLY FUNDED</span></td><td class="num" data-l="Stipend / month"><b class="nv">None</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b></td><td class="num" data-l="Application fee"><b class="nv">NT$ 2,988</b></td><td data-l="GRE / GMAT">Not required</td><td class="dlc" data-l="Apply by"><strong>15 Jan 2027</strong> <span class="left">76 days left</span></td></tr><tr data-region="europe" data-badge="part" data-rank="13" data-stip="0" data-date="2027-01-21"><td class="rkc" data-l="Rank"><span class="rk">13</span></td><th scope="row"><a href="europe.html#jyu">Jyväskylä, Digital Marketing and Corporate Communication</a><span class="u">Europe</span></th><td data-l="Funding"><span class="badge part sm">PARTLY FUNDED</span></td><td class="num" data-l="Stipend / month"><b class="nv">None</b></td><td class="num" data-l="Tuition covered"><b class="nv">About 23%</b></td><td class="num" data-l="Application fee"><b class="nv">Not stated</b></td><td data-l="GRE / GMAT">Not listed</td><td class="dlc" data-l="Apply by"><strong>21 Jan 2027</strong> <span class="left">82 days left</span></td></tr><tr data-region="taiwan" data-badge="part" data-rank="14" data-stip="33000" data-date="2027-03-10"><td class="rkc" data-l="Rank"><span class="rk">14</span></td><th scope="row"><a href="taiwan.html#ntut">NTUT, Interaction Design and Innovation</a><span class="u">Taiwan</span></th><td data-l="Funding"><span class="badge part sm">PARTLY FUNDED</span><small>MOFA — nationality restricted</small></td><td class="num" data-l="Stipend / month"><b class="nv">NT$ 33,000</b></td><td class="num" data-l="Tuition covered"><b class="nv">50%</b></td><td class="num" data-l="Application fee"><b class="nv">Not stated</b></td><td data-l="GRE / GMAT">Not listed</td><td class="dlc" data-l="Apply by"><strong>10 Mar 2027</strong> <span class="left">130 days left</span></td></tr><tr data-region="taiwan" data-badge="part" data-rank="15" data-stip="0"><td class="rkc" data-l="Rank"><span class="rk">15</span></td><th scope="row"><a href="taiwan.html#stust">STUST, Visual Communication Design (IVCD)</a><span class="u">Taiwan</span></th><td data-l="Funding"><span class="badge part sm">PARTLY FUNDED</span><small>STUST full tuition award</small></td><td class="num" data-l="Stipend / month"><b class="nv">None</b></td><td class="num" data-l="Tuition covered"><b class="nv">100%</b></td><td class="num" data-l="Application fee"><b class="nv">Free</b></td><td data-l="GRE / GMAT">Not listed</td><td class="dlc" data-l="Apply by"><strong>Fall 2027 call pending</strong></td></tr></tbody>
-  </table></div>
-  <p class="note">Asia details follow the <a href="https://docs.google.com/document/d/18wbZId42TlIRk0OrQrO9sCHJWErO-pef_dGL6AdICsY/edit?usp=sharing" target="_blank" rel="noopener">project research file</a>. PKU: BGS Type A. Yonsei: GKS-G University Track. SNU and Yonsei dates are the reference intakes stated in that file.</p>
-  <p class="note">Amounts are in NTD (NT$), using the rates below. Stipends apply to the named scholarship. Rank is from the <a href="top-10.html">Top 10 Tier List</a>.</p>
+  <div class="cmp-filter-row">
+    <div class="cmp-regions" role="group" aria-label="Region">
+      <button type="button" data-region-filter="all" aria-pressed="true">All regions</button>
+      <button type="button" data-region-filter="taiwan" aria-pressed="false">Taiwan</button>
+      <button type="button" data-region-filter="asia" aria-pressed="false">Asia</button>
+      <button type="button" data-region-filter="europe" aria-pressed="false">Europe</button>
+    </div>
+    <label class="cmp-full-filter"><input type="checkbox" id="cmp-only-full"><span>Full package only</span></label>
+    <label class="cmp-sort"><span>Sort by</span><select id="cmp-sort"><option value="rank">Phase 4 rank</option><option value="stipend">Highest stipend</option><option value="deadline">Upcoming deadline</option></select></label>
+  </div>
+</form>
+<div class="cmp-viewbar"><p id="cmp-count" role="status" aria-live="polite" aria-atomic="true"><strong>15</strong> programs shown</p><div class="cmp-view-switch" role="group" aria-label="Table columns"><button type="button" data-cmp-view="essentials" aria-pressed="true">Essentials</button><button type="button" data-cmp-view="all" aria-pressed="false">All details</button></div></div>
+<p id="cmp-scroll-hint" class="cmp-scroll-hint">Application fees and tests are shown below. <span class="cmp-desktop-hint">Scroll the table for more columns.</span></p>
+<div class="cmp-table-shell" id="cmp-table-shell" tabindex="0" role="region" aria-label="Program comparison table">
+<table class="cmp-table" id="cmp">
+  <caption class="sr">All 15 programs ranked by the Phase 4 method, with funding, tuition, stipend, application fee, tests and deadlines.</caption>
+  <thead><tr><th scope="col" class="cmp-rank-col">Rank</th><th scope="col" class="cmp-program-col">University / program</th><th scope="col" class="cmp-funding-col">Funding</th><th scope="col" class="cmp-stipend-col">Monthly stipend</th><th scope="col" class="cmp-tuition-col">Tuition</th><th scope="col" class="cmp-extra cmp-fee-col">Application fee</th><th scope="col" class="cmp-extra cmp-tests-col">GRE / GMAT</th><th scope="col" class="cmp-date-col">Admission deadline</th></tr></thead>
+  <tbody><tr data-id="ntu" data-region="asia" data-full="true" data-rank="1" data-stipend="73631" data-search="NTU · WKWSCI Master’s by Research MA Nanyang Technological University (NTU) Singapore, Singapore NTU Research Scholarship and Graduate Assistantship Programme (GAP) asia" data-date="2026-11-15" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-ntu" aria-label="View rank 1 for NTU · WKWSCI">#1</a><small>87/100</small></td>
+<th scope="row" class="cmp-program"><a href="asia.html#ntu"><span class="cmp-school">NTU · WKWSCI</span><span class="cmp-name">Master’s by Research</span></a><span class="cmp-program-meta">Asia <span aria-hidden="true">·</span> MA</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">NTU Research Scholarship</span><small>GAP duties apply</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$73,631</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Up to 2 years</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$1,371</span><small>Non-refundable</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not required</span><small>GRE / GMAT</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2026-11-15">15 Nov 2026</time></span><small>Scholarship with admission</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="mundus" data-region="europe" data-full="true" data-rank="2" data-stipend="50505" data-search="Aarhus + partners Journalism, Media and Globalisation Joint MA Aarhus University and Mundus Journalism partner universities Aarhus, Denmark, then a Year 2 partner in Amsterdam, London, Munich or Prague Erasmus Mundus Scholarship – Mundus Journalism europe" data-date="2027-01-10" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-mundus" aria-label="View rank 2 for Aarhus + partners">#2</a><small>73/100</small></td>
+<th scope="row" class="cmp-program"><a href="europe.html#mundus"><span class="cmp-school">Aarhus + partners</span><span class="cmp-name">Journalism, Media and Globalisation</span></a><span class="cmp-program-meta">Europe <span aria-hidden="true">·</span> Joint MA</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">Erasmus Mundus</span><small>Competitive award</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$50,505</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>2 years</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">Not confirmed</span><small>Separate Mundus process</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not listed</span><small>GRE / GMAT</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2027-01-10">10 Jan 2027</time></span><small>13:00 CET · same scholarship deadline</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="tnua" data-region="taiwan" data-full="true" data-rank="3" data-stipend="18000" data-search="TNUA Studies of Arts and Creative Industries (SAC) MA Taipei National University of the Arts Taipei, Taiwan TaiwanICDF Scholarship taiwan" data-date="" data-date-status="pending">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-tnua" aria-label="View rank 3 for TNUA">#3</a><small>73/100</small></td>
+<th scope="row" class="cmp-program"><a href="taiwan.html#tnua"><span class="cmp-school">TNUA</span><span class="cmp-name">Studies of Arts and Creative Industries (SAC)</span></a><span class="cmp-program-meta">Taiwan <span aria-hidden="true">·</span> MA</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">TaiwanICDF</span><small>2027 program list pending</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$18,000</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Tuition + credit fees</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$2,000</span><small>ICDF exemption possible</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not stated</span><small>Contact the school</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><span>2027 call pending</span></span><small>ICDF: 15 Mar 2027 · listing pending</small><span class="cmp-date-state" >Pending</span></td>
+</tr><tr data-id="clide" data-region="europe" data-full="true" data-rank="4" data-stipend="50505" data-search="CLIDE consortium Intercultural Leadership in the Digital Era Joint master Nicolaus Copernicus University in Toruń and the CLIDE Erasmus Mundus Consortium Consortium in Poland, Spain, Austria, Morocco and Ukraine; actual study mobility may differ Erasmus Mundus Scholarship – CLIDE europe" data-date="2027-03-07" data-date-status="reported">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-clide" aria-label="View rank 4 for CLIDE consortium">#4</a><small>68/100</small></td>
+<th scope="row" class="cmp-program"><a href="europe.html#clide"><span class="cmp-school">CLIDE consortium</span><span class="cmp-name">Intercultural Leadership in the Digital Era</span></a><span class="cmp-program-meta">Europe <span aria-hidden="true">·</span> Joint master</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">Erasmus Mundus</span><small>Stipend award only</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$50,505</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Scholarship recipients</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">Not stated</span><small>Confirm final call</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not listed</span><small>GRE / GMAT</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2027-03-07">7 Mar 2027</time></span><small>Reported · confirm final call</small><span class="cmp-date-state" >Reported</span></td>
+</tr><tr data-id="yonsei" data-region="asia" data-full="true" data-rank="5" data-stipend="31950" data-search="Yonsei University English Language and Literature MA Yonsei University Seoul, South Korea Global Korea Scholarship Graduate (GKS-G) University Track asia" data-date="2026-03-20" data-date-status="reference">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-yonsei" aria-label="View rank 5 for Yonsei University">#5</a><small>67/100</small></td>
+<th scope="row" class="cmp-program"><a href="asia.html#yonsei"><span class="cmp-school">Yonsei University</span><span class="cmp-name">English Language and Literature</span></a><span class="cmp-program-meta">Asia <span aria-hidden="true">·</span> MA</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">GKS-G University Track</span><small>Closed source intake</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$31,950</span><small>approx. per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Up to 2 degree years</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$0</span><small>GKS University Track</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Optional</span><small>GRE / GMAT</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2026-03-20">20 Mar 2026</time></span><small>17:00 KST · next call not supplied</small><span class="cmp-date-state" >Closed reference</span></td>
+</tr><tr data-id="pku" data-region="asia" data-full="true" data-rank="6" data-stipend="13410" data-search="Peking University Public Administration (IMPA-CPPIC) MPA Peking University Beijing, China Beijing Government Scholarship (BGS) Type A asia" data-date="2026-12-25" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-pku" aria-label="View rank 6 for Peking University">#6</a><small>65/100</small></td>
+<th scope="row" class="cmp-program"><a href="asia.html#pku"><span class="cmp-school">Peking University</span><span class="cmp-name">Public Administration (IMPA-CPPIC)</span></a><span class="cmp-program-meta">Asia <span aria-hidden="true">·</span> MPA</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">BGS Type A</span><small>Housing + insurance included</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$13,410</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>2-year Type A award</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$3,576</span><small>No fee waiver</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">GRE optional</span><small>GMAT not accepted</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2026-12-25">25 Dec 2026</time></span><small>BGS: 15 Jun 2027</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="mcu" data-region="taiwan" data-full="true" data-rank="7" data-stipend="20000" data-search="Ming Chuan University International Affairs (GSIA) MA Ming Chuan University Taipei, Taiwan MOE Taiwan Scholarship with MCU tuition top-up taiwan" data-date="2027-05-31" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-mcu" aria-label="View rank 7 for Ming Chuan University">#7</a><small>65/100</small></td>
+<th scope="row" class="cmp-program"><a href="taiwan.html#mcu"><span class="cmp-school">Ming Chuan University</span><span class="cmp-name">International Affairs (GSIA)</span></a><span class="cmp-program-meta">Taiwan <span aria-hidden="true">·</span> MA</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">MOE + MCU top-up</span><small>2027–28 top-up pending</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$20,000</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Approved tuition + fees</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$1,800</span><small>Bank transfer</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not stated</span><small>Contact the school</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2027-05-31">31 May 2027</time></span><small>MOE: local office deadline</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="snu" data-region="asia" data-full="true" data-rank="8" data-stipend="11575" data-search="Seoul National University International Commerce (GSIS) MA Seoul National University (SNU) Seoul, South Korea Graduate Scholarship for Excellent Foreign Students (GSFS) asia" data-date="2026-07-09" data-date-status="reference">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-snu" aria-label="View rank 8 for Seoul National University">#8</a><small>55/100</small></td>
+<th scope="row" class="cmp-program"><a href="asia.html#snu"><span class="cmp-school">Seoul National University</span><span class="cmp-name">International Commerce (GSIS)</span></a><span class="cmp-program-meta">Asia <span aria-hidden="true">·</span> MA</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">GSFS</span><small>Department eligibility applies</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$11,575</span><small>minimum · varies by department</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Up to 2 years</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$2,084</span><small>Non-refundable</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Optional</span><small>GRE / GMAT</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2026-07-09">9 Jul 2026</time></span><small>Next call not supplied</small><span class="cmp-date-state" >Closed reference</span></td>
+</tr><tr data-id="nus" data-region="asia" data-full="true" data-rank="9" data-stipend="73631" data-search="National University of Singapore Economics by Research MSocSci National University of Singapore (NUS) Kent Ridge, Singapore NUS Research Scholarship and Graduate Assistantship Programme (GAP) asia" data-date="2026-11-01" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-nus" aria-label="View rank 9 for National University of Singapore">#9</a><small>50/100</small></td>
+<th scope="row" class="cmp-program"><a href="asia.html#nus"><span class="cmp-school">National University of Singapore</span><span class="cmp-name">Economics by Research</span></a><span class="cmp-program-meta">Asia <span aria-hidden="true">·</span> MSocSci</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge full">FULL PACKAGE</span><span class="cmp-fund-name">NUS Research Scholarship</span><small>GAP duties apply</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$73,631</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Up to 2 years</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$1,270</span><small>Non-refundable</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">GRE optional</span><small>GMAT not stated</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2026-11-01">1 Nov 2026</time></span><small>Same scholarship deadline</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="imics" data-region="taiwan" data-full="false" data-rank="10" data-stipend="10000" data-search="National Chengchi University International Communication Studies (IMICS) MA National Chengchi University Taipei, Taiwan NCCU New Inbound International Students Scholarship Pilot Plan full award taiwan" data-date="2027-03-04" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#r-imics" aria-label="View rank 10 for National Chengchi University">#10</a><small>74/100</small></td>
+<th scope="row" class="cmp-program"><a href="taiwan.html#imics"><span class="cmp-school">National Chengchi University</span><span class="cmp-name">International Communication Studies (IMICS)</span></a><span class="cmp-program-meta">Taiwan <span aria-hidden="true">·</span> MA</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge part">PARTLY FUNDED</span><span class="cmp-fund-name">NCCU Pilot Plan</span><small>Credit fees excluded</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$10,000</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">Tuition + fees</span><small>Credit fees excluded</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$1,600</span><small>Reference; confirm Round 2</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not stated</span><small>Contact the school</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2027-03-04">4 Mar 2027</time></span><small>Round 2 · nomination during review</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="lund" data-region="europe" data-full="false" data-rank="11" data-stipend="0" data-search="Lund University Strategic Communication MSc Lund University Helsingborg, Sweden Lund University Global Scholarship europe" data-date="2027-01-15" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#out-lund" aria-label="View rank 11 for Lund University">#11</a><small>67/100</small></td>
+<th scope="row" class="cmp-program"><a href="europe.html#lund"><span class="cmp-school">Lund University</span><span class="cmp-name">Strategic Communication</span></a><span class="cmp-program-meta">Europe <span aria-hidden="true">·</span> MSc</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge part">PARTLY FUNDED</span><span class="cmp-fund-name">Lund Global Scholarship</span><small>Living costs not covered</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">No stipend</span><small>Living costs payable</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">Partial to 100%</span><small>Award percentage varies</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">SEK900</span><small>NT$ rate not supplied</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">No requirement stated</span><small>GRE / GMAT</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2027-01-15">15 Jan 2027</time></span><small>Scholarship call pending</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="gothenburg" data-region="europe" data-full="false" data-rank="12" data-stipend="0" data-search="University of Gothenburg Digital Communication MSc University of Gothenburg Gothenburg, Sweden Axel Adler Scholarship 2027 europe" data-date="2027-01-15" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#out-gothenburg" aria-label="View rank 12 for University of Gothenburg">#12</a><small>59/100</small></td>
+<th scope="row" class="cmp-program"><a href="europe.html#gothenburg"><span class="cmp-school">University of Gothenburg</span><span class="cmp-name">Digital Communication</span></a><span class="cmp-program-meta">Europe <span aria-hidden="true">·</span> MSc</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge part">PARTLY FUNDED</span><span class="cmp-fund-name">Axel Adler Scholarship</span><small>Living costs not covered</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">No stipend</span><small>Living costs payable</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Tuition only</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">SEK900</span><small>NT$ rate not supplied</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">No requirement stated</span><small>GRE / GMAT</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2027-01-15">15 Jan 2027</time></span><small>Fee + documents: 1 Feb 2027</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="stust" data-region="taiwan" data-full="false" data-rank="13" data-stipend="0" data-search="STUST Visual Communication Design MDes Southern Taiwan University of Science and Technology Tainan, Taiwan STUST Full Tuition and Fees Scholarship taiwan" data-date="" data-date-status="pending">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#out-stust" aria-label="View rank 13 for STUST">#13</a><small>54/100</small></td>
+<th scope="row" class="cmp-program"><a href="taiwan.html#stust"><span class="cmp-school">STUST</span><span class="cmp-name">Visual Communication Design</span></a><span class="cmp-program-meta">Taiwan <span aria-hidden="true">·</span> MDes</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge part">PARTLY FUNDED</span><span class="cmp-fund-name">STUST tuition award</span><small>No stipend</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">No stipend</span><small>Living costs payable</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">100%</span><small>Tuition + fees</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">NT$0</span><small>Reference; confirm 2027</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not stated</span><small>Contact the school</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><span>Fall 2027 pending</span></span><small>Scholarship with admission</small><span class="cmp-date-state" >Pending</span></td>
+</tr><tr data-id="ntut" data-region="taiwan" data-full="false" data-rank="14" data-stipend="33000" data-search="NTUT Interaction Design and Innovation MDes National Taipei University of Technology Taipei, Taiwan MOFA Taiwan Scholarship taiwan" data-date="2027-03-10" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#out-ntut" aria-label="View rank 14 for NTUT">#14</a><small>53/100</small></td>
+<th scope="row" class="cmp-program"><a href="taiwan.html#ntut"><span class="cmp-school">NTUT</span><span class="cmp-name">Interaction Design and Innovation</span></a><span class="cmp-program-meta">Taiwan <span aria-hidden="true">·</span> MDes</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge part">PARTLY FUNDED</span><span class="cmp-fund-name">MOFA Taiwan Scholarship</span><small>Nationality restrictions</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">NT$33,000</span><small>per month</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">50%</span><small>Remaining tuition payable</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">Not stated</span><small>Fall 2027 fee pending</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not stated</span><small>Contact the school</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2027-03-10">10 Mar 2027</time></span><small>MOFA: local office deadline</small><span class="cmp-date-state" hidden></span></td>
+</tr><tr data-id="jyu" data-region="europe" data-full="false" data-rank="15" data-stipend="0" data-search="University of Jyväskylä Digital Marketing and Corporate Communication MSc University of Jyväskylä Jyväskylä, Finland Early-bird tuition discount and conditional second-year tuition scholarship europe" data-date="2027-01-21" data-date-status="">
+<td data-label="Phase 4 rank" class="cmp-rank"><a href="top-10.html#out-jyu" aria-label="View rank 15 for University of Jyväskylä">#15</a><small>49/100</small></td>
+<th scope="row" class="cmp-program"><a href="europe.html#jyu"><span class="cmp-school">University of Jyväskylä</span><span class="cmp-name">Digital Marketing and Corporate Communication</span></a><span class="cmp-program-meta">Europe <span aria-hidden="true">·</span> MSc</span></th>
+<td data-label="Funding" class="cmp-funding"><span class="badge part">PARTLY FUNDED</span><span class="cmp-fund-name">Tuition reductions</span><small>Year 2 award conditional</small></td>
+<td data-label="Monthly stipend" class="cmp-stipend"><span class="cmp-value">No stipend</span><small>Living costs payable</small></td>
+<td data-label="Tuition covered" class="cmp-tuition"><span class="cmp-value">Tuition reduction</span><small>Year 2: NT$144,300 after 55 ECTS</small></td>
+<td data-label="Application fee" class="cmp-extra cmp-fee"><span class="cmp-value">Not stated</span><small>Not confirmed as free</small></td>
+<td data-label="GRE / GMAT" class="cmp-extra cmp-tests"><span class="cmp-value">Not stated</span><small>Contact the school</small></td>
+<td data-label="Admission deadline" class="cmp-deadline"><span class="cmp-value"><time datetime="2027-01-21">21 Jan 2027</time></span><small>15:00 · time zone not stated</small><span class="cmp-date-state" hidden></span></td>
+</tr></tbody>
+</table>
+</div>
+<div class="cmp-empty" id="cmp-empty" hidden><span aria-hidden="true">↺</span><h3>No programs match</h3><p>Try another search or clear the filters.</p><button type="button" id="cmp-empty-reset">Reset filters</button></div>
+<p class="cmp-table-note">Stipends apply only when the named award is won. <a href="top-10.html#criteria">How the ranking works</a></p>
 </section>
-<script>
-(function(){
-  var t=document.getElementById('cmp'),tb=t.tBodies[0],rows=[].slice.call(tb.rows),f='all';
-  var btns=document.querySelectorAll('.seg button'),only=document.getElementById('onlyfull'),sel=document.getElementById('sortby'),shown=document.getElementById('shown');
-  function apply(){
-    var k=sel.value;
-    rows.sort(function(a,b){
-      if(k==='stip')return (+b.dataset.stip)-(+a.dataset.stip)||(+a.dataset.rank)-(+b.dataset.rank);
-      if(k==='date'){var da=a.dataset.date,db=b.dataset.date;if(!da||!db)return da?-1:(db?1:(+a.dataset.rank)-(+b.dataset.rank));var ca=a.classList.contains('closed'),cb=b.classList.contains('closed');if(ca!==cb)return ca?1:-1;return da<db?-1:(da>db?1:0);}
-      return (+a.dataset.rank)-(+b.dataset.rank);
-    });
-    var n=0;rows.forEach(function(r){var ok=(f==='all'||r.dataset.region===f)&&(!only.checked||r.dataset.badge==='full');r.hidden=!ok;if(ok)n++;tb.appendChild(r);});
-    shown.textContent=n;
-  }
-  btns.forEach(function(b){b.addEventListener('click',function(){f=b.dataset.f;btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});apply();});});
-  only.addEventListener('change',apply);sel.addEventListener('change',apply);
-})();
-</script>
+<details class="cmp-notes">
+<summary>Funding notes and sources</summary>
+<div class="cmp-notes-body">
+<div><h2>Read before applying</h2><ul>
+<li>Full packages cover tuition and a stipend. All awards remain competitive.</li>
+<li>TNUA’s 2027 ICDF program list and MCU’s 2027–28 tuition top-up are pending.</li>
+<li>NCCU excludes credit fees. NTUT covers 50% tuition.</li>
+<li>Yonsei and SNU show closed reference rounds; no new deadline is assumed.</li>
+</ul></div>
+<div><h2>Costs and dates</h2><ul>
+<li>SEK900 fees remain in SEK: the research files supply no NT$ rate.</li>
+<li>Aarhus’s general fee of about NT$5,411 is not confirmed for the separate Mundus process.</li>
+<li>Unknown fees are not treated as free. CLIDE’s 7 March date is reported and needs confirmation.</li>
+</ul><p class="cmp-source-links">Research files: <a href="https://docs.google.com/document/d/18wbZId42TlIRk0OrQrO9sCHJWErO-pef_dGL6AdICsY/edit?tab=t.0" target="_blank" rel="noopener">Asia</a> · <a href="https://docs.google.com/document/d/1QcWAfuH7U53IsIt3y28sknJvEVf1NZWTfHDT8gKmWq4/edit?usp=drive_link" target="_blank" rel="noopener">Europe</a> · <a href="https://docs.google.com/document/d/1St6Jt3gYd2pPSz7TwkVwu-hlVX3wctjY/edit?usp=drive_link" target="_blank" rel="noopener">Taiwan</a></p></div>
+</div></details>
+<noscript><style>.compare-page .cmp-extra{display:table-cell!important}.compare-page .cmp-toolbar,.compare-page .cmp-viewbar,.compare-page .cmp-scroll-hint{display:none}</style><p class="cmp-table-note">Search and filters require JavaScript. All 15 programs and every column remain available below.</p></noscript>
 </main>
 <footer class="site-foot"><div class="wrap footer-bar">
   <div class="footer-info">
@@ -69,30 +216,8 @@
     <p>Rules change every year. Confirm on the official page.</p>
   </div>
   <details class="footer-rates"><summary>Exchange rates used</summary>
-    <ul class="rates"><li>EUR 1 = NT$ 36.075 (28 Oct 2026)</li><li>SGD 1 = NT$ 25.39 (29 Oct 2026)</li><li>KRW 1,000 = NT$ 23.15 (29 Oct 2026)</li><li>CNY 1 = NT$ 4.47 (Oct 2026)</li><li>SEK 1 = NT$ 3.32 (31 Oct 2026)</li></ul>
+    <ul class="rates"><li>EUR 1 = NT$ 36.075 (28 Oct 2026)</li><li>SGD 1 = NT$ 25.39 (29 Oct 2026)</li><li>KRW 1,000 = NT$ 23.15 (29 Oct 2026)</li><li>CNY 1 = NT$ 4.47 (Oct 2026)</li></ul>
   </details>
 </div></footer>
-<script>
-(function(){
-  var t=new Date();t.setHours(0,0,0,0);
-  document.querySelectorAll('[data-date]').forEach(function(el){
-    var d=new Date(el.getAttribute('data-date')+'T00:00:00');
-    var n=Math.round((d-t)/864e5), out=el.querySelector('.left');
-    el.classList.remove('closed','soon');
-    if(n<0){el.classList.add('closed');if(out)out.textContent='Closed';}
-    else{if(n<=14)el.classList.add('soon');if(out)out.textContent=n===0?'Closes today':(n===1?'1 day left':n+' days left');}
-  });
-  var list=document.querySelector('.next-list');
-  if(list){var shown=0;list.querySelectorAll('li').forEach(function(li){if(li.classList.contains('closed')||shown>=6){li.hidden=true;}else{shown++;}});}
-  var boxes=document.querySelectorAll('.checklist input[type=checkbox]');
-  if(boxes.length){
-    var saved={};try{saved=JSON.parse(localStorage.getItem('gtgs-checklist')||'{}');}catch(err){}
-    boxes.forEach(function(b){
-      if(saved[b.id])b.checked=true;
-      b.addEventListener('change',function(){saved[b.id]=b.checked;try{localStorage.setItem('gtgs-checklist',JSON.stringify(saved));}catch(err){}});
-    });
-  }
-})();
-</script>
 </body>
 </html>
