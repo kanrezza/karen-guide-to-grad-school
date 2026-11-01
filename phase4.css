@@ -75,11 +75,22 @@ main.p4-page{max-width:1360px;padding-top:1.8rem;padding-bottom:3rem;font-size:1
 .p4-card-body h4{font-size:1.4rem;line-height:1.2;margin:0 0 .35rem;letter-spacing:-.015em}
 .p4-card-university{font-size:.875rem;color:var(--muted);margin:0 0 .8rem}
 .p4-card-description{font-size:.95rem;margin:0 0 .8rem;line-height:1.55}
-.p4-card-facts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:.8rem 0;margin:0 0 .65rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.p4-card-facts>div{min-width:0}
-.p4-card-facts dt{font-size:.75rem;color:var(--muted);margin-bottom:.2rem}
-.p4-card-facts dd{font-size:1.1rem;font-weight:600;line-height:1.35;margin:0;font-variant-numeric:tabular-nums}
-.p4-card-facts small{display:block;font-size:.75rem;font-weight:400;color:var(--muted);margin-top:.15rem}
+.p4-card-facts{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;padding:0;margin:0 0 .65rem}
+.p4-card-facts>div{min-width:0;padding:.7rem .75rem;border:1px solid var(--line);border-radius:8px;background:var(--tint)}
+.p4-card-facts dt{display:flex;align-items:center;gap:.35rem;font-size:.8125rem;font-weight:600;color:var(--muted);margin-bottom:.3rem}
+.p4-card-facts .ui-icon{color:var(--navy);flex:none}
+.p4-card-facts dd{font-size:1.0625rem;font-weight:600;line-height:1.4;margin:0;font-variant-numeric:tabular-nums}
+.p4-card-facts small{display:block;font-size:.8125rem;font-weight:400;line-height:1.45;color:var(--muted);margin-top:.25rem}
+.p4-card-reference time{color:var(--muted);text-decoration:line-through}
+.p4-card-reference small{color:var(--red)}
+.p4-card-tests{display:block;padding:.75rem .85rem;margin:0 0 .8rem;border:1px solid var(--line);border-radius:8px;background:var(--tint);color:var(--ink);text-decoration:none}
+.p4-card-tests-label{display:flex;align-items:center;gap:.4rem;font-size:.8125rem;font-weight:600;color:var(--muted);margin-bottom:.3rem}
+.p4-card-tests-label>span:last-child{margin-left:auto;color:var(--navy)}
+.p4-card-tests .ui-icon{color:var(--navy)}
+.p4-card-tests strong{display:block;font-size:.9375rem;font-weight:600;line-height:1.45}
+.p4-card-tests small{display:block;font-size:.8125rem;font-weight:400;color:var(--muted);line-height:1.45;margin-top:.2rem}
+.p4-card-tests:hover{border-color:var(--navy)}
+.p4-card-tests:hover strong{text-decoration:underline;text-underline-offset:.18em}
 .p4-funding-name{font-size:.875rem;font-weight:600;margin:0 0 .5rem}
 .p4-watch{display:flex;align-items:baseline;gap:.4rem;font-size:.8125rem;line-height:1.5;margin:0 0 .7rem;color:var(--muted)}
 .p4-watch::before{content:'i';display:inline-grid;place-items:center;width:.95rem;height:.95rem;flex:none;border:1px solid currentColor;border-radius:50%;font-size:.65rem;font-weight:600;line-height:1}

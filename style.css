@@ -27,6 +27,7 @@ html{-webkit-text-size-adjust:100%;scroll-padding-top:1rem}
 body{margin:0;background:var(--paper);color:var(--ink);
   font:400 1.0625rem/1.6 "Atkinson Hyperlegible Next","Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",sans-serif}
 img{max-width:100%;height:auto;display:block}
+.ui-icon{display:inline-block;width:1.15em;height:1.15em;flex:none;vertical-align:-.18em;color:currentColor}
 a{color:var(--navy);text-underline-offset:.18em;text-decoration-thickness:1px}
 a:hover{text-decoration-thickness:2px}
 :focus-visible{outline:3px solid var(--navy);outline-offset:2px;border-radius:4px}
