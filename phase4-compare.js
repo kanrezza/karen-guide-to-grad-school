@@ -1,4 +1,4 @@
-/* Client-side controls for the pre-rendered Phase 4 comparison. */
+/* Client-side controls for the program comparison. */
 (function () {
   'use strict';
   var page = document.querySelector('.compare-page');

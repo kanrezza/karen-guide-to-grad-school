@@ -1,4 +1,4 @@
-/* Filter the pre-rendered Phase 3 source library. */
+/* Filter the program source library. */
 (function () {
   'use strict';
   var page = document.querySelector('.about-page');
